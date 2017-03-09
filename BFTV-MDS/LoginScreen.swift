@@ -58,6 +58,7 @@ class LoginScreen: UIViewController{
         //Check if NIS is valid.
         if UtilVariables.nisNumber == "10120380142"{ //If NIS Number was found, send
             let nextView = storyBoard.instantiateViewController(withIdentifier: "Screen1Nav") as! UINavigationController
+            UtilVariables.isNisValid = true
             self.present(nextView, animated: true, completion: nil)
         }else if UtilVariables.nisNumber == ""{ //If NIS is empty, throw an error message.
             let messageAlert = UIAlertController(title: "Erro", message: "Você não digitou um número NIS.", preferredStyle: UIAlertControllerStyle.alert)

@@ -17,7 +17,7 @@ class MainMenu: UIViewController{
     let iphoneModel = UIDevice.current.modelName
     
     //Outlets
-    @IBOutlet weak var messageButton: UIButton! //Outlet for "Mensagens" Button.
+    @IBOutlet weak var messageButton: UIButton!
     @IBOutlet weak var newsButton: UIButton! //Outlet for "Noticias" Button.
     @IBOutlet weak var nisNumber: UILabel! //Outlet for display NIS Number.
     @IBOutlet weak var userName: UILabel! //Oulet for display User Name.
@@ -44,7 +44,7 @@ class MainMenu: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         self.nisNumber.text = "NIS " + UtilVariables.nisNumber //Set NIS number text
         self.userName.text = UtilVariables.userName //Set User Name Text
-        self.messageButton.setTitle("Mensagens", for: UIControlState.normal) //Set Message button title to "Mensagens"
+        self.messageButton.setTitle("2 não Lidas", for: UIControlState.normal) //Set Message button title to "Mensagens"
         self.newsButton.setTitle("Noticias", for: UIControlState.normal) //Set News Button title
         self.mapsButton.setTitle("Mapa", for: UIControlState.normal)
         self.resizeOutletsandConstraints()
@@ -57,6 +57,9 @@ class MainMenu: UIViewController{
                     self.labelInsertNIS.fadeIn(0.9)
                 })
             })
+        } else{
+            self.cardBackground_LoggedOff.image = UIImage(named: "orangeRetangule")
+            self.cardBackground_LoggedOff.fadeIn(0.5)
         }
     }
     

@@ -95,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="qrcodeButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackRetangule" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-hq-h5q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeRetangule" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-hq-h5q">
                                 <rect key="frame" x="0.0" y="64" width="320" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="iI0-9F-smB"/>
@@ -107,14 +107,6 @@
                                 <state key="normal" title="newsButton"/>
                                 <connections>
                                     <segue destination="FGr-E4-yyl" kind="show" id="9Qv-rM-TLt"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESl-8f-1v7">
-                                <rect key="frame" x="175" y="430" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="messageButton"/>
-                                <connections>
-                                    <segue destination="AD9-Ya-HFr" kind="show" id="apc-Oa-CZe"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nisLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh6-CW-6kV">
@@ -190,6 +182,57 @@
                                     <constraint firstAttribute="width" constant="100" id="d3T-eI-J0d"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAI-4T-Ec6">
+                                <rect key="frame" x="16" y="186" width="123" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="newMessageButton">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="3 Não Lidas">
+                                            <attributes>
+                                                <font key="NSFont" size="10" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="AD9-Ya-HFr" kind="show" id="Akb-sC-Ode"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="messageDivider" translatesAutoresizingMaskIntoConstraints="NO" id="M5A-wg-fQ4">
+                                <rect key="frame" x="160" y="178" width="1" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-hj-OeD">
+                                <rect key="frame" x="181" y="186" width="123" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="parcelasButton">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="N Parcelas">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="10"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Próximo Pagamento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkG-34-sHe">
+                                <rect key="frame" x="81" y="93" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26 Janeiro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-Cc-P2j">
+                                <rect key="frame" x="69" y="109" width="177" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97523397840000003" green="0.97523397840000003" blue="0.97523397840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -216,7 +259,7 @@
                         <outlet property="labelInsertNIS" destination="k1s-MI-c1g" id="PAk-Eg-31V"/>
                         <outlet property="labelOptions" destination="PDN-kf-EA8" id="Pwi-al-Vyl"/>
                         <outlet property="mapsButton" destination="Y1K-sh-Z9g" id="Kav-mu-oJ5"/>
-                        <outlet property="messageButton" destination="ESl-8f-1v7" id="28G-z5-VRz"/>
+                        <outlet property="messageButton" destination="jAI-4T-Ec6" id="8LZ-Fg-ynu"/>
                         <outlet property="newsButton" destination="oaZ-Ic-HgA" id="HGP-NJ-pEK"/>
                         <outlet property="nisNumber" destination="sh6-CW-6kV" id="PL5-pq-0G1"/>
                         <outlet property="userName" destination="6ad-BO-1X0" id="u7k-Pm-SYe"/>
@@ -480,13 +523,16 @@
     </scenes>
     <resources>
         <image name="aboutButton" width="99" height="120"/>
-        <image name="blackRetangule" width="540" height="324"/>
         <image name="calendarButton" width="102" height="117"/>
         <image name="cardPicture" width="159" height="144"/>
         <image name="divider" width="492" height="504"/>
         <image name="interactivityButton" width="100" height="112"/>
         <image name="mapsButton" width="97" height="115"/>
+        <image name="messageDivider" width="1" height="66"/>
+        <image name="newMessageButton" width="196" height="34"/>
+        <image name="orangeRetangule" width="540" height="324"/>
         <image name="otherButton" width="82" height="117"/>
+        <image name="parcelasButton" width="167" height="30"/>
         <image name="socialButton" width="104" height="95"/>
     </resources>
 </document>
