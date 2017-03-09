@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CA0B8F7B1A7D37B20EBE7A8 /* Pods_BFTV_MDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0518DB3052EB7DEB0B971B3F /* Pods_BFTV_MDSTests.framework */; };
+		D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */; };
+		D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424F5251E66193600D1E82A /* QRCodeController.swift */; };
+		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
+		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
+		D4989EEC1E4DF956001260F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4989EEA1E4DF956001260F0 /* Main.storyboard */; };
+		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
+		D4989EF11E4DF956001260F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4989EEF1E4DF956001260F0 /* LaunchScreen.storyboard */; };
+		D4989EFC1E4DF956001260F0 /* BFTV_MDSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EFB1E4DF956001260F0 /* BFTV_MDSTests.swift */; };
+		D4989F071E4DF956001260F0 /* BFTV_MDSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F061E4DF956001260F0 /* BFTV_MDSUITests.swift */; };
+		D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F151E4FADE8001260F0 /* LoginScreen.swift */; };
+		D4989F191E4FB489001260F0 /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */; };
+		D4989F1B1E50DAC7001260F0 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F1A1E50DAC7001260F0 /* MainMenu.swift */; };
+		D4989F1D1E50DBC2001260F0 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F1C1E50DBC2001260F0 /* MessageList.swift */; };
+		D4989F1F1E510A19001260F0 /* UtilVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F1E1E510A19001260F0 /* UtilVariables.swift */; };
+		D4989F211E510D38001260F0 /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F201E510D38001260F0 /* NewsList.swift */; };
+		D4989F231E510D43001260F0 /* MessagePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F221E510D43001260F0 /* MessagePost.swift */; };
+		D4989F251E510D55001260F0 /* NewsPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F241E510D55001260F0 /* NewsPost.swift */; };
+		D4989F271E510D67001260F0 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F261E510D67001260F0 /* MessageCell.swift */; };
+		D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F281E510D7D001260F0 /* NewsCell.swift */; };
+		D4989F2B1E51EF38001260F0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F2A1E51EF38001260F0 /* News.swift */; };
+		D4989F2D1E533A8C001260F0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F2C1E533A8C001260F0 /* Messages.swift */; };
+		D4D81A691E6603E100399818 /* MapsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D81A681E6603E100399818 /* MapsScreen.swift */; };
+		DE4A15789991D395F1EB3B58 /* Pods_BFTV_MDSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9581C37271FA2589913BF94B /* Pods_BFTV_MDSUITests.framework */; };
+		EA7765D1F38120027B5C758E /* Pods_BFTV_MDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD741B7F01862034FEDBF085 /* Pods_BFTV_MDS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4989EF81E4DF956001260F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4989EDB1E4DF956001260F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4989EE21E4DF956001260F0;
+			remoteInfo = "BFTV-MDS";
+		};
+		D4989F031E4DF956001260F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4989EDB1E4DF956001260F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4989EE21E4DF956001260F0;
+			remoteInfo = "BFTV-MDS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0518DB3052EB7DEB0B971B3F /* Pods_BFTV_MDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFTV_MDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D710AFE518E7E9665ADFB38 /* Pods-BFTV-MDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDSTests/Pods-BFTV-MDSTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FA6AF29D51EA223DA0D87FF /* Pods-BFTV-MDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDSTests/Pods-BFTV-MDSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9581C37271FA2589913BF94B /* Pods_BFTV_MDSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFTV_MDSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFF496CB27C40BA4B9ABD18 /* Pods-BFTV-MDS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDS/Pods-BFTV-MDS.debug.xcconfig"; sourceTree = "<group>"; };
+		C21E0F13AC224625C748D27C /* Pods-BFTV-MDSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDSUITests/Pods-BFTV-MDSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC20B7ADC28E10B361DCDEA7 /* Pods-BFTV-MDSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDSUITests/Pods-BFTV-MDSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CD741B7F01862034FEDBF085 /* Pods_BFTV_MDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFTV_MDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeExtension.swift; sourceTree = "<group>"; };
+		D424F5251E66193600D1E82A /* QRCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
+		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4989EEB1E4DF956001260F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4989EED1E4DF956001260F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4989EF01E4DF956001260F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4989EF21E4DF956001260F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4989EF71E4DF956001260F0 /* BFTV-MDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BFTV-MDSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4989EFB1E4DF956001260F0 /* BFTV_MDSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTV_MDSTests.swift; sourceTree = "<group>"; };
+		D4989EFD1E4DF956001260F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4989F021E4DF956001260F0 /* BFTV-MDSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BFTV-MDSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4989F061E4DF956001260F0 /* BFTV_MDSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTV_MDSUITests.swift; sourceTree = "<group>"; };
+		D4989F081E4DF956001260F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4989F151E4FADE8001260F0 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = "<group>"; };
+		D4989F1A1E50DAC7001260F0 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		D4989F1C1E50DBC2001260F0 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
+		D4989F1E1E510A19001260F0 /* UtilVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilVariables.swift; sourceTree = "<group>"; };
+		D4989F201E510D38001260F0 /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		D4989F221E510D43001260F0 /* MessagePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePost.swift; sourceTree = "<group>"; };
+		D4989F241E510D55001260F0 /* NewsPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPost.swift; sourceTree = "<group>"; };
+		D4989F261E510D67001260F0 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		D4989F281E510D7D001260F0 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		D4989F2A1E51EF38001260F0 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		D4989F2C1E533A8C001260F0 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		D4D81A681E6603E100399818 /* MapsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsScreen.swift; sourceTree = "<group>"; };
+		F65FDD8759848533E84F9F47 /* Pods-BFTV-MDS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDS/Pods-BFTV-MDS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4989EE01E4DF956001260F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7765D1F38120027B5C758E /* Pods_BFTV_MDS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4989EF41E4DF956001260F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA0B8F7B1A7D37B20EBE7A8 /* Pods_BFTV_MDSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4989EFF1E4DF956001260F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4A15789991D395F1EB3B58 /* Pods_BFTV_MDSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0841A798440343C4517D59A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF496CB27C40BA4B9ABD18 /* Pods-BFTV-MDS.debug.xcconfig */,
+				F65FDD8759848533E84F9F47 /* Pods-BFTV-MDS.release.xcconfig */,
+				3FA6AF29D51EA223DA0D87FF /* Pods-BFTV-MDSTests.debug.xcconfig */,
+				3D710AFE518E7E9665ADFB38 /* Pods-BFTV-MDSTests.release.xcconfig */,
+				C21E0F13AC224625C748D27C /* Pods-BFTV-MDSUITests.debug.xcconfig */,
+				CC20B7ADC28E10B361DCDEA7 /* Pods-BFTV-MDSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4246AFC1E70F5BF00DEBEBE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D4989F1E1E510A19001260F0 /* UtilVariables.swift */,
+				D4989F2A1E51EF38001260F0 /* News.swift */,
+				D4989F2C1E533A8C001260F0 /* Messages.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D4989EDA1E4DF956001260F0 = {
+			isa = PBXGroup;
+			children = (
+				D4989EE51E4DF956001260F0 /* BFTV-MDS */,
+				D4989EFA1E4DF956001260F0 /* BFTV-MDSTests */,
+				D4989F051E4DF956001260F0 /* BFTV-MDSUITests */,
+				D4989EE41E4DF956001260F0 /* Products */,
+				0841A798440343C4517D59A1 /* Pods */,
+				D587A7880091C086D36F4BFE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4989EE41E4DF956001260F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4989EE31E4DF956001260F0 /* BFTV-MDS.app */,
+				D4989EF71E4DF956001260F0 /* BFTV-MDSTests.xctest */,
+				D4989F021E4DF956001260F0 /* BFTV-MDSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4989EE51E4DF956001260F0 /* BFTV-MDS */ = {
+			isa = PBXGroup;
+			children = (
+				D4246AFC1E70F5BF00DEBEBE /* Utils */,
+				D4989F171E4FB462001260F0 /* Extensions */,
+				D4989F141E4FADC7001260F0 /* Screens */,
+				D4989EE61E4DF956001260F0 /* AppDelegate.swift */,
+				D4989EE81E4DF956001260F0 /* ViewController.swift */,
+				D4989EEA1E4DF956001260F0 /* Main.storyboard */,
+				D4989EED1E4DF956001260F0 /* Assets.xcassets */,
+				D4989EEF1E4DF956001260F0 /* LaunchScreen.storyboard */,
+				D4989EF21E4DF956001260F0 /* Info.plist */,
+			);
+			path = "BFTV-MDS";
+			sourceTree = "<group>";
+		};
+		D4989EFA1E4DF956001260F0 /* BFTV-MDSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4989EFB1E4DF956001260F0 /* BFTV_MDSTests.swift */,
+				D4989EFD1E4DF956001260F0 /* Info.plist */,
+			);
+			path = "BFTV-MDSTests";
+			sourceTree = "<group>";
+		};
+		D4989F051E4DF956001260F0 /* BFTV-MDSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4989F061E4DF956001260F0 /* BFTV_MDSUITests.swift */,
+				D4989F081E4DF956001260F0 /* Info.plist */,
+			);
+			path = "BFTV-MDSUITests";
+			sourceTree = "<group>";
+		};
+		D4989F141E4FADC7001260F0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D4989F151E4FADE8001260F0 /* LoginScreen.swift */,
+				D4989F1A1E50DAC7001260F0 /* MainMenu.swift */,
+				D4989F1C1E50DBC2001260F0 /* MessageList.swift */,
+				D4989F261E510D67001260F0 /* MessageCell.swift */,
+				D4989F221E510D43001260F0 /* MessagePost.swift */,
+				D4989F201E510D38001260F0 /* NewsList.swift */,
+				D4989F281E510D7D001260F0 /* NewsCell.swift */,
+				D4989F241E510D55001260F0 /* NewsPost.swift */,
+				D4D81A681E6603E100399818 /* MapsScreen.swift */,
+				D424F5251E66193600D1E82A /* QRCodeController.swift */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		D4989F171E4FB462001260F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */,
+				D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D587A7880091C086D36F4BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD741B7F01862034FEDBF085 /* Pods_BFTV_MDS.framework */,
+				0518DB3052EB7DEB0B971B3F /* Pods_BFTV_MDSTests.framework */,
+				9581C37271FA2589913BF94B /* Pods_BFTV_MDSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4989EE21E4DF956001260F0 /* BFTV-MDS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4989F0B1E4DF956001260F0 /* Build configuration list for PBXNativeTarget "BFTV-MDS" */;
+			buildPhases = (
+				8EAC279FA44E2A1AB58BD498 /* [CP] Check Pods Manifest.lock */,
+				D4989EDF1E4DF956001260F0 /* Sources */,
+				D4989EE01E4DF956001260F0 /* Frameworks */,
+				D4989EE11E4DF956001260F0 /* Resources */,
+				5CF3A854BF324AF91163A19B /* [CP] Embed Pods Frameworks */,
+				6E6BA811318043F96273A10A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BFTV-MDS";
+			productName = "BFTV-MDS";
+			productReference = D4989EE31E4DF956001260F0 /* BFTV-MDS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4989EF61E4DF956001260F0 /* BFTV-MDSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4989F0E1E4DF956001260F0 /* Build configuration list for PBXNativeTarget "BFTV-MDSTests" */;
+			buildPhases = (
+				99904EF257B26318EDA6AEA2 /* [CP] Check Pods Manifest.lock */,
+				D4989EF31E4DF956001260F0 /* Sources */,
+				D4989EF41E4DF956001260F0 /* Frameworks */,
+				D4989EF51E4DF956001260F0 /* Resources */,
+				B7044C90F0A6E2E2D2AF88E8 /* [CP] Embed Pods Frameworks */,
+				4DDCEB292CFD3EE9189D5581 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4989EF91E4DF956001260F0 /* PBXTargetDependency */,
+			);
+			name = "BFTV-MDSTests";
+			productName = "BFTV-MDSTests";
+			productReference = D4989EF71E4DF956001260F0 /* BFTV-MDSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4989F011E4DF956001260F0 /* BFTV-MDSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4989F111E4DF956001260F0 /* Build configuration list for PBXNativeTarget "BFTV-MDSUITests" */;
+			buildPhases = (
+				0B78296C2AFD7ECF0049CE9C /* [CP] Check Pods Manifest.lock */,
+				D4989EFE1E4DF956001260F0 /* Sources */,
+				D4989EFF1E4DF956001260F0 /* Frameworks */,
+				D4989F001E4DF956001260F0 /* Resources */,
+				DA8AF5C750704A70DFE7F54F /* [CP] Embed Pods Frameworks */,
+				C2F3FC33BE2E36C16624477A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4989F041E4DF956001260F0 /* PBXTargetDependency */,
+			);
+			name = "BFTV-MDSUITests";
+			productName = "BFTV-MDSUITests";
+			productReference = D4989F021E4DF956001260F0 /* BFTV-MDSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4989EDB1E4DF956001260F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "LAVID-UFPB";
+				TargetAttributes = {
+					D4989EE21E4DF956001260F0 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = H67F7VXCAB;
+						ProvisioningStyle = Automatic;
+					};
+					D4989EF61E4DF956001260F0 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D4989EE21E4DF956001260F0;
+					};
+					D4989F011E4DF956001260F0 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D4989EE21E4DF956001260F0;
+					};
+				};
+			};
+			buildConfigurationList = D4989EDE1E4DF956001260F0 /* Build configuration list for PBXProject "BFTV-MDS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4989EDA1E4DF956001260F0;
+			productRefGroup = D4989EE41E4DF956001260F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4989EE21E4DF956001260F0 /* BFTV-MDS */,
+				D4989EF61E4DF956001260F0 /* BFTV-MDSTests */,
+				D4989F011E4DF956001260F0 /* BFTV-MDSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4989EE11E4DF956001260F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4989EF11E4DF956001260F0 /* LaunchScreen.storyboard in Resources */,
+				D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */,
+				D4989EEC1E4DF956001260F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4989EF51E4DF956001260F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4989F001E4DF956001260F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B78296C2AFD7ECF0049CE9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DDCEB292CFD3EE9189D5581 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFTV-MDSTests/Pods-BFTV-MDSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CF3A854BF324AF91163A19B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFTV-MDS/Pods-BFTV-MDS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E6BA811318043F96273A10A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFTV-MDS/Pods-BFTV-MDS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EAC279FA44E2A1AB58BD498 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99904EF257B26318EDA6AEA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7044C90F0A6E2E2D2AF88E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFTV-MDSTests/Pods-BFTV-MDSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F3FC33BE2E36C16624477A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFTV-MDSUITests/Pods-BFTV-MDSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8AF5C750704A70DFE7F54F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFTV-MDSUITests/Pods-BFTV-MDSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4989EDF1E4DF956001260F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4989F271E510D67001260F0 /* MessageCell.swift in Sources */,
+				D4989F1F1E510A19001260F0 /* UtilVariables.swift in Sources */,
+				D4989F1B1E50DAC7001260F0 /* MainMenu.swift in Sources */,
+				D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */,
+				D4989F2D1E533A8C001260F0 /* Messages.swift in Sources */,
+				D4D81A691E6603E100399818 /* MapsScreen.swift in Sources */,
+				D4989F211E510D38001260F0 /* NewsList.swift in Sources */,
+				D4989F191E4FB489001260F0 /* TextFieldMaxLengths.swift in Sources */,
+				D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */,
+				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
+				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
+				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
+				D4989F231E510D43001260F0 /* MessagePost.swift in Sources */,
+				D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */,
+				D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */,
+				D4989F2B1E51EF38001260F0 /* News.swift in Sources */,
+				D4989F1D1E50DBC2001260F0 /* MessageList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4989EF31E4DF956001260F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4989EFC1E4DF956001260F0 /* BFTV_MDSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4989EFE1E4DF956001260F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4989F071E4DF956001260F0 /* BFTV_MDSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4989EF91E4DF956001260F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4989EE21E4DF956001260F0 /* BFTV-MDS */;
+			targetProxy = D4989EF81E4DF956001260F0 /* PBXContainerItemProxy */;
+		};
+		D4989F041E4DF956001260F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4989EE21E4DF956001260F0 /* BFTV-MDS */;
+			targetProxy = D4989F031E4DF956001260F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4989EEA1E4DF956001260F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4989EEB1E4DF956001260F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4989EEF1E4DF956001260F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4989EF01E4DF956001260F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4989F091E4DF956001260F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4989F0A1E4DF956001260F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4989F0C1E4DF956001260F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CFF496CB27C40BA4B9ABD18 /* Pods-BFTV-MDS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H67F7VXCAB;
+				INFOPLIST_FILE = "BFTV-MDS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVID-UFPB.BFTV-MDS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D4989F0D1E4DF956001260F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65FDD8759848533E84F9F47 /* Pods-BFTV-MDS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H67F7VXCAB;
+				INFOPLIST_FILE = "BFTV-MDS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVID-UFPB.BFTV-MDS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D4989F0F1E4DF956001260F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FA6AF29D51EA223DA0D87FF /* Pods-BFTV-MDSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BFTV-MDSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVID-UFPB.BFTV-MDSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BFTV-MDS.app/BFTV-MDS";
+			};
+			name = Debug;
+		};
+		D4989F101E4DF956001260F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D710AFE518E7E9665ADFB38 /* Pods-BFTV-MDSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BFTV-MDSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVID-UFPB.BFTV-MDSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BFTV-MDS.app/BFTV-MDS";
+			};
+			name = Release;
+		};
+		D4989F121E4DF956001260F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C21E0F13AC224625C748D27C /* Pods-BFTV-MDSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "BFTV-MDSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVID-UFPB.BFTV-MDSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "BFTV-MDS";
+			};
+			name = Debug;
+		};
+		D4989F131E4DF956001260F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC20B7ADC28E10B361DCDEA7 /* Pods-BFTV-MDSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "BFTV-MDSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LAVID-UFPB.BFTV-MDSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "BFTV-MDS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4989EDE1E4DF956001260F0 /* Build configuration list for PBXProject "BFTV-MDS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4989F091E4DF956001260F0 /* Debug */,
+				D4989F0A1E4DF956001260F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4989F0B1E4DF956001260F0 /* Build configuration list for PBXNativeTarget "BFTV-MDS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4989F0C1E4DF956001260F0 /* Debug */,
+				D4989F0D1E4DF956001260F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4989F0E1E4DF956001260F0 /* Build configuration list for PBXNativeTarget "BFTV-MDSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4989F0F1E4DF956001260F0 /* Debug */,
+				D4989F101E4DF956001260F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4989F111E4DF956001260F0 /* Build configuration list for PBXNativeTarget "BFTV-MDSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4989F121E4DF956001260F0 /* Debug */,
+				D4989F131E4DF956001260F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4989EDB1E4DF956001260F0 /* Project object */;
+}

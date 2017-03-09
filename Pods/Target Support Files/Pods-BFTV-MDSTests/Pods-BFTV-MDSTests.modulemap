@@ -1,0 +1,6 @@
+framework module Pods_BFTV_MDSTests {
+  umbrella header "Pods-BFTV-MDSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
