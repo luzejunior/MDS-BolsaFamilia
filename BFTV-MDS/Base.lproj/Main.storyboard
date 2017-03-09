@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -123,24 +124,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VEJA MAIS OPÇÕES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDN-kf-EA8">
-                                <rect key="frame" x="91" y="173" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VEJA MAIS OPÇÕES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDN-kf-EA8">
+                                <rect key="frame" x="91" y="171" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toque para inserir o seu NIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1s-MI-c1g">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Toque para inserir o seu NIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1s-MI-c1g">
                                 <rect key="frame" x="99" y="186" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.42796295881271362" green="0.56860655546188354" blue="0.61381250619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardPicture" translatesAutoresizingMaskIntoConstraints="NO" id="krY-Ks-XcQ">
-                                <rect key="frame" x="109" y="75" width="100" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-ds-nim">
                                 <rect key="frame" x="16" y="232" width="287" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,20 +183,36 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardPicture" translatesAutoresizingMaskIntoConstraints="NO" id="krY-Ks-XcQ">
+                                <rect key="frame" x="106" y="75" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Ir6-K7-Y80"/>
+                                    <constraint firstAttribute="width" constant="100" id="d3T-eI-J0d"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97523397840000003" green="0.97523397840000003" blue="0.97523397840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PHA-hq-h5q" firstAttribute="leading" secondItem="axk-Js-C69" secondAttribute="leading" id="8SQ-YY-Bc3"/>
+                            <constraint firstItem="PDN-kf-EA8" firstAttribute="top" secondItem="krY-Ks-XcQ" secondAttribute="bottom" constant="10" id="Hwm-GJ-369"/>
+                            <constraint firstItem="k1s-MI-c1g" firstAttribute="top" secondItem="PDN-kf-EA8" secondAttribute="bottom" constant="3" id="MpX-G8-uWZ"/>
                             <constraint firstAttribute="trailing" secondItem="PHA-hq-h5q" secondAttribute="trailing" id="ORA-CT-XQG"/>
+                            <constraint firstItem="k1s-MI-c1g" firstAttribute="leading" secondItem="axk-Js-C69" secondAttribute="leadingMargin" constant="83" id="ZHp-Gz-Ion"/>
+                            <constraint firstItem="krY-Ks-XcQ" firstAttribute="top" secondItem="45x-zN-Y9H" secondAttribute="bottom" constant="11" id="c31-3c-ivI"/>
+                            <constraint firstItem="krY-Ks-XcQ" firstAttribute="leading" secondItem="axk-Js-C69" secondAttribute="leadingMargin" constant="90" id="dsq-zE-qmc"/>
                             <constraint firstItem="PHA-hq-h5q" firstAttribute="top" secondItem="45x-zN-Y9H" secondAttribute="bottom" id="uhb-zB-2xu"/>
+                            <constraint firstItem="PDN-kf-EA8" firstAttribute="leading" secondItem="axk-Js-C69" secondAttribute="leadingMargin" constant="75" id="xeO-23-ZMK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LG0-hb-fOm"/>
                     <connections>
                         <outlet property="calendarButton" destination="Ng0-82-JZJ" id="VcL-2j-Pgq"/>
                         <outlet property="cardBackground_LoggedOff" destination="PHA-hq-h5q" id="HLQ-2c-kNc"/>
+                        <outlet property="cardHorizontalConstraint" destination="dsq-zE-qmc" id="udn-9s-0fF"/>
                         <outlet property="cardImage" destination="krY-Ks-XcQ" id="M9q-VK-Cx8"/>
                         <outlet property="dividerMenu" destination="7W3-A1-s0E" id="wAE-VS-04S"/>
+                        <outlet property="label1TopCardImage" destination="Hwm-GJ-369" id="l7j-LZ-neJ"/>
+                        <outlet property="label2TopLabel1" destination="MpX-G8-uWZ" id="CL8-Qs-kYN"/>
                         <outlet property="labelInsertNIS" destination="k1s-MI-c1g" id="PAk-Eg-31V"/>
                         <outlet property="labelOptions" destination="PDN-kf-EA8" id="Pwi-al-Vyl"/>
                         <outlet property="mapsButton" destination="Y1K-sh-Z9g" id="Kav-mu-oJ5"/>

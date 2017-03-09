@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9CA0B8F7B1A7D37B20EBE7A8 /* Pods_BFTV_MDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0518DB3052EB7DEB0B971B3F /* Pods_BFTV_MDSTests.framework */; };
 		D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */; };
+		D4246AFE1E71D23900DEBEBE /* IphoneModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */; };
 		D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424F5251E66193600D1E82A /* QRCodeController.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		CC20B7ADC28E10B361DCDEA7 /* Pods-BFTV-MDSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFTV-MDSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFTV-MDSUITests/Pods-BFTV-MDSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CD741B7F01862034FEDBF085 /* Pods_BFTV_MDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFTV_MDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeExtension.swift; sourceTree = "<group>"; };
+		D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IphoneModelExtension.swift; sourceTree = "<group>"; };
 		D424F5251E66193600D1E82A /* QRCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */,
 				D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */,
+				D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */,
 				D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */,
 				D4989F2B1E51EF38001260F0 /* News.swift in Sources */,
+				D4246AFE1E71D23900DEBEBE /* IphoneModelExtension.swift in Sources */,
 				D4989F1D1E50DBC2001260F0 /* MessageList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

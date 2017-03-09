@@ -14,30 +14,30 @@ import UIKit
 class MainMenu: UIViewController{
     
     //Control Variables
+    let iphoneModel = UIDevice.current.modelName
     
     //Outlets
     @IBOutlet weak var messageButton: UIButton! //Outlet for "Mensagens" Button.
     @IBOutlet weak var newsButton: UIButton! //Outlet for "Noticias" Button.
     @IBOutlet weak var nisNumber: UILabel! //Outlet for display NIS Number.
     @IBOutlet weak var userName: UILabel! //Oulet for display User Name.
-    @IBOutlet weak var mapsButton: UIButton! 
+    @IBOutlet weak var mapsButton: UIButton!
     
     //Card Logged Off Outlets
     @IBOutlet weak var cardBackground_LoggedOff: UIImageView!
     @IBOutlet weak var labelOptions: UILabel!
     @IBOutlet weak var labelInsertNIS: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
+    //Constraints
+    @IBOutlet weak var cardHorizontalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var label1TopCardImage: NSLayoutConstraint!
+    @IBOutlet weak var label2TopLabel1: NSLayoutConstraint!
     
     //Menu Outlets
     @IBOutlet weak var dividerMenu: UIImageView!
     @IBOutlet weak var calendarButton: UIButton!
     
     //----------------- Screen State Functions -----------------\\
-    
-    //Function to resize buttons and change constraints on hard code.
-    func resizeOutletsandConstraints(){
-        
-    }
     
     //This function will be called before Screen load.
     //It will set the labels, constraints and screen configurations.
@@ -47,6 +47,7 @@ class MainMenu: UIViewController{
         self.messageButton.setTitle("Mensagens", for: UIControlState.normal) //Set Message button title to "Mensagens"
         self.newsButton.setTitle("Noticias", for: UIControlState.normal) //Set News Button title
         self.mapsButton.setTitle("Mapa", for: UIControlState.normal)
+        self.resizeOutletsandConstraints()
         if !(UtilVariables.isNisValid) {
             self.cardBackground_LoggedOff.fadeIn(0.5 ,completion: {
                 (finished: Bool) -> Void in
@@ -56,6 +57,19 @@ class MainMenu: UIViewController{
                     self.labelInsertNIS.fadeIn(0.9)
                 })
             })
+        }
+    }
+    
+    //Function to resize buttons and change constraints on hard code.
+    func resizeOutletsandConstraints(){
+        print(iphoneModel)
+        if iphoneModel == "iPhone 4s" || iphoneModel == "iPhone 4"{
+            self.cardHorizontalConstraint.constant = CGFloat(90)
+            self.label1TopCardImage.constant = CGFloat(10)
+            self.label2TopLabel1.constant = CGFloat(3)
+        }
+        else if iphoneModel == "iPhone 7" || iphoneModel == "iPhone 6s" || iphoneModel == "iPhone 6"{
+            self.cardHorizontalConstraint.constant = CGFloat(120)
         }
     }
     
