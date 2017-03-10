@@ -27,11 +27,11 @@ class LoginScreen: UIViewController{
     //It will set the labels, constraints and screen configurations.
     //Text Field 1 will only accept Number input with max lenght 11.
     override func viewWillAppear(_ animated: Bool) {
-        self.label1.text = "Insira o seu numero NIS" //Insert String in Text Label.
+        self.label1.text = "Libere mais opções no aplicativo" //Insert String in Text Label.
         self.textField1.maxLength = 11 //Set the max number of characters in textField1 to 11.
         self.textField1.keyboardType = UIKeyboardType.numberPad //Set the keyboard type to numberPad.
         self.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
-        self.loginButton.setTitle("Entrar", for:UIControlState.normal) //Set button title to "Entrar".
+        self.loginButton.setTitle("Confirmar", for:UIControlState.normal) //Set button title to "Entrar".
 //        let height: CGFloat = 65 //whatever height you want
 //        let bounds = navigationBar.bounds
 //        self.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: height)

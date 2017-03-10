@@ -148,12 +148,12 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     func onCardImageClicked(){
         let popover = _storyboard.instantiateViewController(withIdentifier: "Login Screen") as! LoginScreen
         popover.modalPresentationStyle = UIModalPresentationStyle.popover
-        popover.preferredContentSize = CGSize(width: 300, height: 300)
+        popover.preferredContentSize = CGSize(width: 300, height: 350)
         let popoverViewController = popover.popoverPresentationController
         popoverViewController!.permittedArrowDirections = .any
         popoverViewController!.delegate = self
         popoverViewController!.sourceView = self.view
-        popover.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 1, height: 1)
+        popover.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 100, width: 1, height: 1)
         present(popover, animated: true, completion: nil)
     }
     
