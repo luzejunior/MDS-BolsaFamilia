@@ -11,10 +11,11 @@ import Foundation
 import UIKit
 
 //View Controller Class to handle MainMenu Screen
-class MainMenu: UIViewController{
+class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     
     //Control Variables
     let iphoneModel = UIDevice.current.modelName
+    let _storyboard = UIStoryboard(name: "Main", bundle: nil)
     
     //Outlets
     @IBOutlet weak var messageButton: UIButton!
@@ -32,6 +33,14 @@ class MainMenu: UIViewController{
     @IBOutlet weak var cardHorizontalConstraint: NSLayoutConstraint!
     @IBOutlet weak var label1TopCardImage: NSLayoutConstraint!
     @IBOutlet weak var label2TopLabel1: NSLayoutConstraint!
+    
+    //Card Logged In Outlets
+    @IBOutlet weak var messageDivider: UIImageView!
+    @IBOutlet weak var parcelasButton: UIButton!
+    @IBOutlet weak var nextPaymentLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    //Constraints
+    
     
     //Menu Outlets
     @IBOutlet weak var dividerMenu: UIImageView!
@@ -57,10 +66,20 @@ class MainMenu: UIViewController{
                     self.labelInsertNIS.fadeIn(0.9)
                 })
             })
-        } else{
-            self.cardBackground_LoggedOff.image = UIImage(named: "orangeRetangule")
-            self.cardBackground_LoggedOff.fadeIn(0.5)
+        }else{
+            self.presentLoginOnscreen()
         }
+    }
+    
+    //This function is called when the Screen load
+    //It will set the screen title in navigation bar to "Bolsa Familia"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Bolsa Familia" //Set Navigation Bar to "Bolsa Familia"
+        
+        let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.onCardImageClicked))
+        self.cardImage.addGestureRecognizer(imageTapRecognizer)
+        self.cardImage.isUserInteractionEnabled = true
     }
     
     //Function to resize buttons and change constraints on hard code.
@@ -76,12 +95,42 @@ class MainMenu: UIViewController{
         }
     }
     
-    //This function is called when the Screen load
-    //It will set the screen title in navigation bar to "Bolsa Familia"
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Bolsa Familia" //Set Navigation Bar to "Bolsa Familia"
+    func dismissUserLoggedOffMenu(){
+        self.cardImage.fadeOut(0.5)
+        self.labelInsertNIS.fadeOut(0.5)
+        self.labelOptions.fadeOut(0.5)
+        self.cardBackground_LoggedOff.fadeOut(0.5)
+        self.cardImage.isHidden = true
+        self.labelInsertNIS.isHidden = true
+        self.labelOptions.isHidden = true
     }
+    
+    func presentLoginOnscreen(){
+        self.messageButton.isHidden = false
+        self.messageDivider.isHidden = false
+        self.parcelasButton.isHidden = false
+        self.nextPaymentLabel.isHidden = false
+        self.dateLabel.isHidden = false
+        self.cardBackground_LoggedOff.image = UIImage(named: "orangeRetangule")
+        self.cardBackground_LoggedOff.fadeIn(0.5, completion: {
+            (finished: Bool) -> Void in
+            self.nextPaymentLabel.fadeIn(0.5)
+            self.dateLabel.fadeIn(0.5)
+            self.messageButton.fadeIn(0.5)
+            self.messageDivider.fadeIn(0.5)
+            self.parcelasButton.fadeIn(0.5)
+        })
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        print(UtilVariables.isNisValid)
+        if UtilVariables.isNisValid {
+            self.dismissUserLoggedOffMenu()
+            self.presentLoginOnscreen()
+        }
+        print("Popover dismisssed")
+    }
+
     
     //----------------- Segue Functions -----------------\\
     
@@ -92,5 +141,23 @@ class MainMenu: UIViewController{
         let backItem = UIBarButtonItem() //Create an variable to handle the BarButton Item, in this case, the back button.
         backItem.title = "" //Set the back button title to empty. If you remove this code line, the next screen will show the title "Bolsa Familia" after the back button.
         navigationItem.backBarButtonItem = backItem //Set the next screen navigation item back button to our new created back button.
+    }
+    
+    //----------------- Buttons Actions Functions -----------------\\
+    
+    func onCardImageClicked(){
+        let popover = _storyboard.instantiateViewController(withIdentifier: "Login Screen") as! LoginScreen
+        popover.modalPresentationStyle = UIModalPresentationStyle.popover
+        popover.preferredContentSize = CGSize(width: 300, height: 300)
+        let popoverViewController = popover.popoverPresentationController
+        popoverViewController!.permittedArrowDirections = .any
+        popoverViewController!.delegate = self
+        popoverViewController!.sourceView = self.view
+        popover.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 1, height: 1)
+        present(popover, animated: true, completion: nil)
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
     }
 }

@@ -20,8 +20,6 @@ class LoginScreen: UIViewController{
     @IBOutlet weak var label1: UILabel! //Outlet for "Insira o seu número NIS" Label.
     @IBOutlet weak var textField1: UITextField! //Outlet for Text Field 1.
     @IBOutlet weak var loginButton: UIButton! //Outlet for "Entrar" Button.
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var navBarTitle: UINavigationItem!
     
     //----------------- Screen State Functions -----------------\\
     
@@ -32,19 +30,19 @@ class LoginScreen: UIViewController{
         self.label1.text = "Insira o seu numero NIS" //Insert String in Text Label.
         self.textField1.maxLength = 11 //Set the max number of characters in textField1 to 11.
         self.textField1.keyboardType = UIKeyboardType.numberPad //Set the keyboard type to numberPad.
+        self.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
         self.loginButton.setTitle("Entrar", for:UIControlState.normal) //Set button title to "Entrar".
-        let height: CGFloat = 65 //whatever height you want
-        let bounds = navigationBar.bounds
-        self.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: height)
-        self.navBarTitle.title = "Bolsa Familia"
-        self.navBarTitle.titleView?.tintColor = UIColor.white
+//        let height: CGFloat = 65 //whatever height you want
+//        let bounds = navigationBar.bounds
+//        self.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: height)
+//        self.navBarTitle.title = "Bolsa Familia"
+//        self.navBarTitle.titleView?.tintColor = UIColor.white
     }
     
     //This function is called when the Screen load
     //It will call the method to add Done Button to Numeric Pad Keyboard.
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
     }
     
     //----------------- Button Action Functions -----------------\\
@@ -57,9 +55,11 @@ class LoginScreen: UIViewController{
         //UtilVariables.nisNumber = textField1.text! //Global Variable nisNumber.
         //Check if NIS is valid.
         if UtilVariables.nisNumber == "10120380142"{ //If NIS Number was found, send
-            let nextView = storyBoard.instantiateViewController(withIdentifier: "Screen1Nav") as! UINavigationController
-            UtilVariables.isNisValid = true
-            self.present(nextView, animated: true, completion: nil)
+            //let nextView = storyBoard.instantiateViewController(withIdentifier: "Screen1Nav") as! UINavigationController
+                UtilVariables.isNisValid = true
+                dismiss(animated: true, completion: nil)
+                popoverPresentationController?.delegate?.popoverPresentationControllerDidDismissPopover?(popoverPresentationController!)
+            //self.present(nextView, animated: true, completion: nil)
         }else if UtilVariables.nisNumber == ""{ //If NIS is empty, throw an error message.
             let messageAlert = UIAlertController(title: "Erro", message: "Você não digitou um número NIS.", preferredStyle: UIAlertControllerStyle.alert)
             messageAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
@@ -99,7 +99,7 @@ class LoginScreen: UIViewController{
         doneToolbar.sizeToFit()
         
         //Include the Toolbar in textField1 outlet.
-        self.textField1.inputAccessoryView = doneToolbar
+        //self.textField1.inputAccessoryView = doneToolbar
     }
     
     //Function to handle "Done" button click.
