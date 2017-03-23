@@ -44,26 +44,6 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     
     //Menu Outlets
     @IBOutlet weak var dividerMenu: UIImageView! //Divider Image to icons menu background.
-    
-    //----------------- Constraints Functions -----------------\\
-    
-    //Function to resize buttons and change constraints on hard code.
-    //This function changes the icons sizes and constraints constants to fit iPhones Screens sizes.
-    func resizeOutletsandConstraints(){
-        print(iphoneModel) //Debug the iPhone Model
-        
-        //For iPhones with 3.5 inch screens:
-        if iphoneModel == "iPhone 4s" || iphoneModel == "iPhone 4"{
-            self.cardHorizontalConstraint.constant = CGFloat(90)
-            self.label1TopCardImage.constant = CGFloat(10)
-            self.label2TopLabel1.constant = CGFloat(3)
-        }
-        
-        //For iPhones with 4.7 inch screens:
-        else if iphoneModel == "iPhone 7" || iphoneModel == "iPhone 6s" || iphoneModel == "iPhone 6"{
-            self.cardHorizontalConstraint.constant = CGFloat(120)
-        }
-    }
 
     //----------------- Screen State Functions -----------------\\
     
@@ -148,6 +128,26 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
             self.parcelasButton.fadeIn(0.5)
         })
     }
+    
+    //----------------- Constraints Functions -----------------\\
+    
+    //Function to resize buttons and change constraints on hard code.
+    //This function changes the icons sizes and constraints constants to fit iPhones Screens sizes.
+    func resizeOutletsandConstraints(){
+        print(iphoneModel) //Debug the iPhone Model
+        
+        //For iPhones with 3.5 inch screens:
+        if iphoneModel == "iPhone 4s" || iphoneModel == "iPhone 4"{
+            self.cardHorizontalConstraint.constant = CGFloat(90)
+            self.label1TopCardImage.constant = CGFloat(10)
+            self.label2TopLabel1.constant = CGFloat(3)
+        }
+            
+            //For iPhones with 4.7 inch screens:
+        else if iphoneModel == "iPhone 7" || iphoneModel == "iPhone 6s" || iphoneModel == "iPhone 6"{
+            self.cardHorizontalConstraint.constant = CGFloat(120)
+        }
+    }
 
     //----------------- Segue Functions -----------------\\
     
@@ -177,7 +177,7 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         present(popover, animated: true, completion: nil) //Show Popover.
     }
     
-    //----------------- Popover Actions Functions -----------------\\
+    //----------------- Popover Action Functions -----------------\\
 
     //This function is called when popover is dismissed by user or by the popover view controller.
     func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
