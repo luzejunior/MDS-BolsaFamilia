@@ -54,11 +54,11 @@ class LoginScreen: UIViewController{
     @IBAction func onLoginButtonClicked(_ sender: Any) {
         //UtilVariables.nisNumber = textField1.text! //Global Variable nisNumber.
         //Check if NIS is valid.
-        if UtilVariables.nisNumber == "10120380142"{ //If NIS Number was found, send
+        if UtilVariables.nisNumber == "10120380142"{ //If NIS Number was found
             //let nextView = storyBoard.instantiateViewController(withIdentifier: "Screen1Nav") as! UINavigationController
-                UtilVariables.isNisValid = true
-                dismiss(animated: true, completion: nil)
-                popoverPresentationController?.delegate?.popoverPresentationControllerDidDismissPopover?(popoverPresentationController!)
+                UtilVariables.isNisValid = true //Set variable that handles Nis authenticity to True.
+                dismiss(animated: true, completion: nil) //Dismiss the popover
+                popoverPresentationController?.delegate?.popoverPresentationControllerDidDismissPopover?(popoverPresentationController!) //Delegate the popover to dismiss.
             //self.present(nextView, animated: true, completion: nil)
         }else if UtilVariables.nisNumber == ""{ //If NIS is empty, throw an error message.
             let messageAlert = UIAlertController(title: "Erro", message: "Você não digitou um número NIS.", preferredStyle: UIAlertControllerStyle.alert)
