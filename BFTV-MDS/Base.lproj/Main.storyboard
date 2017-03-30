@@ -284,7 +284,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="LG0-hb-fOm"/>
                     <connections>
-                        <outlet property="calendarButton" destination="Ng0-82-JZJ" id="VcL-2j-Pgq"/>
                         <outlet property="cardBackground_LoggedOff" destination="PHA-hq-h5q" id="HLQ-2c-kNc"/>
                         <outlet property="cardHorizontalConstraint" destination="dsq-zE-qmc" id="udn-9s-0fF"/>
                         <outlet property="cardImage" destination="krY-Ks-XcQ" id="M9q-VK-Cx8"/>
@@ -515,12 +514,26 @@
                     <view key="view" contentMode="scaleToFill" id="M9x-8W-mF0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaS-tq-cE9" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="223" width="288" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeRetangule" translatesAutoresizingMaskIntoConstraints="NO" id="2oJ-hj-OU7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapsView" destination="xaS-tq-cE9" id="2Af-X4-AdB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lX-PK-fFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2541" y="-858"/>
+            <point key="canvasLocation" x="2540.625" y="-858.75"/>
         </scene>
         <!--Message List-->
         <scene sceneID="KLe-s7-uzu">

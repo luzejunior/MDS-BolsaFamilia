@@ -12,7 +12,9 @@ import UIKit
 
 class MessageList: UITableViewController {
     
+    //#############################################################################
     //----------------- Screen State Functions -----------------\\
+    //#############################################################################
     
     //This function will be called before Screen load.
     override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +28,9 @@ class MessageList: UITableViewController {
         self.title = "Mensagens" //Set Navigation Bar title to "Noticias"
     }
     
+    //#############################################################################
     //----------------- TableView State Functions -----------------\\
+    //#############################################################################
     
     //This Method sets the number of sections in Table View List
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,7 +52,9 @@ class MessageList: UITableViewController {
         return cell //Return the NewsCell which will be displayed.
     }
     
+    //#############################################################################
     //----------------- Segue Functions -----------------\\
+    //#############################################################################
     
     //Function for prepare variables and texts for the next screen.
     //Segue is the transition for the next screen.

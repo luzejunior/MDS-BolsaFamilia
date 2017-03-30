@@ -21,7 +21,9 @@ class LoginScreen: UIViewController{
     @IBOutlet weak var textField1: UITextField! //Outlet for Text Field 1.
     @IBOutlet weak var loginButton: UIButton! //Outlet for "Entrar" Button.
     
+    //#############################################################################
     //----------------- Screen State Functions -----------------\\
+    //#############################################################################
     
     //This function will be called before Screen load.
     //It will set the labels, constraints and screen configurations.
@@ -45,7 +47,9 @@ class LoginScreen: UIViewController{
         super.viewDidLoad()
     }
     
+    //#############################################################################
     //----------------- Button Action Functions -----------------\\
+    //#############################################################################
     
     //Function to Handle login button.
     //Onclick the function will authenticate the user.
@@ -75,7 +79,9 @@ class LoginScreen: UIViewController{
         }
     }
     
+    //#############################################################################
     //----------------- Other Functions -----------------\\
+    //#############################################################################
     
     //Function to add Done button to Numeric Keyboard.
     //By default, the iPhone keyboard does'nt have an "Done" button, so the keyboard appear and never desappear.

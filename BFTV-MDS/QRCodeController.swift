@@ -22,7 +22,9 @@ class QRCodeController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     //Outlets
     @IBOutlet weak var messageLabel: UILabel!
     
+    //#############################################################################
     //----------------- Screen State Functions -----------------\\
+    //#############################################################################
     
     //This function is called when Screen loads.
     override func viewDidLoad() {
@@ -34,7 +36,9 @@ class QRCodeController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         self.initializeQRCode(capture_device: device!) //Call function to initialize QRCode Capture.
     }
     
+    //#############################################################################
     //----------------- QRCode Functions -----------------\\
+    //#############################################################################
     
     //This function initialize the QRCode capture with Camera.
     func initializeQRCode(capture_device: AVCaptureDevice){

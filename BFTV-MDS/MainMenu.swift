@@ -45,7 +45,9 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     //Menu Outlets
     @IBOutlet weak var dividerMenu: UIImageView! //Divider Image to icons menu background.
 
+    //#############################################################################
     //----------------- Screen State Functions -----------------\\
+    //#############################################################################
     
     //This function will be called before Screen load.
     //It will set the labels, constraints and screen configurations.
@@ -80,7 +82,9 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         self.cardImage.isUserInteractionEnabled = true
     }
     
+    //#############################################################################
     //----------------- Login Menu Card Presentation Functions -----------------\\
+    //#############################################################################
     
     //This Function will dismiss the Logged off screen.
     func dismissUserLoggedOffMenu(){
@@ -129,7 +133,9 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         })
     }
     
+    //#############################################################################
     //----------------- Constraints Functions -----------------\\
+    //#############################################################################
     
     //Function to resize buttons and change constraints on hard code.
     //This function changes the icons sizes and constraints constants to fit iPhones Screens sizes.
@@ -149,7 +155,9 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         }
     }
 
+    //#############################################################################
     //----------------- Segue Functions -----------------\\
+    //#############################################################################
     
     //Function for prepare variables and texts for the next screen.
     //Segue is the transition for the next screen.
@@ -160,7 +168,9 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         navigationItem.backBarButtonItem = backItem //Set the next screen navigation item back button to our new created back button.
     }
     
+    //#############################################################################
     //----------------- Buttons Actions Functions -----------------\\
+    //#############################################################################
     
     //When user tapp at credit card image, this function will be called.
     //This function presents the popover presentation style, showing the login screen view in a popup allowing users to log in.
@@ -177,7 +187,9 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         present(popover, animated: true, completion: nil) //Show Popover.
     }
     
+    //#############################################################################
     //----------------- Popover Action Functions -----------------\\
+    //#############################################################################
 
     //This function is called when popover is dismissed by user or by the popover view controller.
     func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {

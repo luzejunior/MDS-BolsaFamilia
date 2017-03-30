@@ -19,7 +19,9 @@ class MessagePost: UIViewController{
     @IBOutlet weak var datePost: UILabel!
     @IBOutlet weak var mainTextPost: UILabel!
     
+    //#############################################################################
     //----------------- Screen State Functions -----------------\\
+    //#############################################################################
     
     //This function will be called before Screen load.
     override func viewWillAppear(_ animated: Bool) {

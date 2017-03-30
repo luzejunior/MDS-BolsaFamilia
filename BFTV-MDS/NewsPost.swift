@@ -20,7 +20,9 @@ class NewsPost: UIViewController{
     @IBOutlet weak var datePost: UILabel! //Outlet to handle date of post.
     @IBOutlet weak var mainTextPost: UILabel! //Outlet for display the main news text.
     
+    //#############################################################################
     //----------------- Screen State Functions -----------------\\
+    //#############################################################################
     
     //This function will be called before Screen load.
     override func viewWillAppear(_ animated: Bool) {
