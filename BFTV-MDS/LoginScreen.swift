@@ -32,7 +32,6 @@ class LoginScreen: UIViewController{
         self.label1.text = "Libere mais opções no aplicativo" //Insert String in Text Label.
         self.textField1.maxLength = 11 //Set the max number of characters in textField1 to 11.
         self.textField1.keyboardType = UIKeyboardType.numberPad //Set the keyboard type to numberPad.
-        self.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
         self.loginButton.setTitle("Confirmar", for:UIControlState.normal) //Set button title to "Entrar".
 //        let height: CGFloat = 65 //whatever height you want
 //        let bounds = navigationBar.bounds
@@ -45,6 +44,7 @@ class LoginScreen: UIViewController{
     //It will call the method to add Done Button to Numeric Pad Keyboard.
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
     }
     
     //#############################################################################
@@ -105,7 +105,7 @@ class LoginScreen: UIViewController{
         doneToolbar.sizeToFit()
         
         //Include the Toolbar in textField1 outlet.
-        //self.textField1.inputAccessoryView = doneToolbar
+        self.textField1.inputAccessoryView = doneToolbar
     }
     
     //Function to handle "Done" button click.

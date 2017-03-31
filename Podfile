@@ -9,7 +9,6 @@ use_frameworks!
     pod 'GoogleMaps'
     pod 'GooglePlaces’
     pod 'Alamofire', '~> 4.4'
-  end
 
   target 'BFTV-MDSTests' do
     inherit! :search_paths
