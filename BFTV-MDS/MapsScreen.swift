@@ -13,9 +13,10 @@ import GoogleMaps
 import GooglePlaces
 
 //Class to handle Google Maps view controler interaction.
-class MapsScreen: UIViewController, GMSMapViewDelegate{
+class MapsScreen: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var mapsView: GMSMapView!
+    let locationManager = CLLocationManager()
     
     //Variables
     var places: GMSPlacesClient?
@@ -29,6 +30,8 @@ class MapsScreen: UIViewController, GMSMapViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         places = GMSPlacesClient() //Instantiate places to load pins on map.
         
         self.title = "Mapa" //Set the title of the screen to "Mapa"
@@ -46,6 +49,24 @@ class MapsScreen: UIViewController, GMSMapViewDelegate{
     func createGPSScreen(latitude: CLLocationDegrees, longitude: CLLocationDegrees, zoom: Float){
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: zoom) //Define a camera for map.
         self.mapsView.camera = camera
-        self.mapsView.isMyLocationEnabled = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            self.locationManager.startUpdatingLocation()
+            self.mapsView.isMyLocationEnabled = true
+            self.mapsView.settings.myLocationButton = true
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Location Changed")
+        if let locations = locations.first{
+            //let new_coordinate = CLLocationCoordinate2DMake(locations.coordinate.latitude,locations.coordinate.longitude)
+            //self.mapsView.animate(with: GMSCameraUpdate.setTarget(new_coordinate))
+            self.mapsView.animate(to: GMSCameraPosition(target: locations.coordinate, zoom: 15, bearing: 0, viewingAngle: 0))
+            print("Camera Position Changed")
+            //locationManager.stopUpdatingLocation()
+        }
     }
 }
