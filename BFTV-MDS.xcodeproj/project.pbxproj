@@ -11,6 +11,9 @@
 		D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */; };
 		D4246AFE1E71D23900DEBEBE /* IphoneModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */; };
 		D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424F5251E66193600D1E82A /* QRCodeController.swift */; };
+		D43583401E941D3A00C8E89A /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D435833F1E941D3A00C8E89A /* CellView.xib */; };
+		D43583421E941D4600C8E89A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583411E941D4600C8E89A /* CellView.swift */; };
+		D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583431E941D5300C8E89A /* CalendarViewController.swift */; };
 		D469621F1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */; };
 		D46962221E8E82C200262878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46962201E8E82C200262878 /* Main.storyboard */; };
 		D46962241E8E858D00262878 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46962231E8E858D00262878 /* AddressCell.swift */; };
@@ -66,6 +69,9 @@
 		D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeExtension.swift; sourceTree = "<group>"; };
 		D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IphoneModelExtension.swift; sourceTree = "<group>"; };
 		D424F5251E66193600D1E82A /* QRCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
+		D435833F1E941D3A00C8E89A /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		D43583411E941D4600C8E89A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		D43583431E941D5300C8E89A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoDeAtendimentoViewController.swift; sourceTree = "<group>"; };
 		D46962211E8E82C200262878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BFTV-MDS/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D46962231E8E858D00262878 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
@@ -148,6 +154,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		D435833E1E941CDF00C8E89A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D43583411E941D4600C8E89A /* CellView.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		D4989EDA1E4DF956001260F0 = {
 			isa = PBXGroup;
 			children = (
@@ -173,12 +187,14 @@
 		D4989EE51E4DF956001260F0 /* BFTV-MDS */ = {
 			isa = PBXGroup;
 			children = (
+				D435833E1E941CDF00C8E89A /* Calendar */,
 				D4246AFC1E70F5BF00DEBEBE /* Utils */,
 				D4989F171E4FB462001260F0 /* Extensions */,
 				D4989F141E4FADC7001260F0 /* Screens */,
 				D4989EE61E4DF956001260F0 /* AppDelegate.swift */,
 				D4989EE81E4DF956001260F0 /* ViewController.swift */,
 				D46962201E8E82C200262878 /* Main.storyboard */,
+				D435833F1E941D3A00C8E89A /* CellView.xib */,
 				D4989EED1E4DF956001260F0 /* Assets.xcassets */,
 				D4989EEF1E4DF956001260F0 /* LaunchScreen.storyboard */,
 				D4989EF21E4DF956001260F0 /* Info.plist */,
@@ -219,6 +235,7 @@
 				D424F5251E66193600D1E82A /* QRCodeController.swift */,
 				D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */,
 				D46962231E8E858D00262878 /* AddressCell.swift */,
+				D43583431E941D5300C8E89A /* CalendarViewController.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -360,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43583401E941D3A00C8E89A /* CellView.xib in Resources */,
 				D46962221E8E82C200262878 /* Main.storyboard in Resources */,
 				D4989EF11E4DF956001260F0 /* LaunchScreen.storyboard in Resources */,
 				D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */,
@@ -539,12 +557,14 @@
 				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
 				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
+				D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */,
 				D4989F231E510D43001260F0 /* MessagePost.swift in Sources */,
 				D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */,
 				D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */,
 				D4989F2B1E51EF38001260F0 /* News.swift in Sources */,
 				D4246AFE1E71D23900DEBEBE /* IphoneModelExtension.swift in Sources */,
 				D4989F1D1E50DBC2001260F0 /* MessageList.swift in Sources */,
+				D43583421E941D4600C8E89A /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@ use_frameworks!
     pod 'GoogleMaps'
     pod 'GooglePlaces’
     pod 'Alamofire', '~> 4.4'
+    pod 'JTAppleCalendar', '~> 6.1'
 
   target 'BFTV-MDSTests' do
     inherit! :search_paths
