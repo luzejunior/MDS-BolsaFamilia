@@ -352,9 +352,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-jb-ggz">
+                                <rect key="frame" x="124" y="150" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pesquisar"/>
+                                <connections>
+                                    <action selector="onPesquisarClicked:" destination="wCE-8b-GqU" eventType="touchUpInside" id="JY2-Vz-bsS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="CPFTextField" destination="enO-Le-LDW" id="VZ3-8W-a5Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikO-os-8gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
