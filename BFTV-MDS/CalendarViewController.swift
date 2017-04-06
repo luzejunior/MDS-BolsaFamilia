@@ -13,10 +13,12 @@ import JTAppleCalendar
 class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource{
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var nisTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.nisTextField.addDoneButtonOnKeyboard()
         calendarView.dataSource = self
         calendarView.delegate = self
         calendarView.registerCellViewXib(file: "CellView") // Registering your cell is manditory

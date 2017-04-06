@@ -25,7 +25,7 @@
 		D4989EFC1E4DF956001260F0 /* BFTV_MDSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EFB1E4DF956001260F0 /* BFTV_MDSTests.swift */; };
 		D4989F071E4DF956001260F0 /* BFTV_MDSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F061E4DF956001260F0 /* BFTV_MDSUITests.swift */; };
 		D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F151E4FADE8001260F0 /* LoginScreen.swift */; };
-		D4989F191E4FB489001260F0 /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */; };
+		D4989F191E4FB489001260F0 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F181E4FB489001260F0 /* TextFieldExtensions.swift */; };
 		D4989F1B1E50DAC7001260F0 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F1A1E50DAC7001260F0 /* MainMenu.swift */; };
 		D4989F1D1E50DBC2001260F0 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F1C1E50DBC2001260F0 /* MessageList.swift */; };
 		D4989F1F1E510A19001260F0 /* UtilVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989F1E1E510A19001260F0 /* UtilVariables.swift */; };
@@ -90,7 +90,7 @@
 		D4989F061E4DF956001260F0 /* BFTV_MDSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTV_MDSUITests.swift; sourceTree = "<group>"; };
 		D4989F081E4DF956001260F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4989F151E4FADE8001260F0 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = "<group>"; };
+		D4989F181E4FB489001260F0 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		D4989F1A1E50DAC7001260F0 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		D4989F1C1E50DBC2001260F0 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		D4989F1E1E510A19001260F0 /* UtilVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilVariables.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 		D4989F171E4FB462001260F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */,
+				D4989F181E4FB489001260F0 /* TextFieldExtensions.swift */,
 				D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */,
 				D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */,
 				D43583451E95D47200C8E89A /* DateExtension.swift */,
@@ -555,7 +555,7 @@
 				D46962241E8E858D00262878 /* AddressCell.swift in Sources */,
 				D4D81A691E6603E100399818 /* MapsScreen.swift in Sources */,
 				D4989F211E510D38001260F0 /* NewsList.swift in Sources */,
-				D4989F191E4FB489001260F0 /* TextFieldMaxLengths.swift in Sources */,
+				D4989F191E4FB489001260F0 /* TextFieldExtensions.swift in Sources */,
 				D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */,
 				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,

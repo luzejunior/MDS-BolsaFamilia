@@ -44,7 +44,7 @@ class LoginScreen: UIViewController{
     //It will call the method to add Done Button to Numeric Pad Keyboard.
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
+        self.textField1.addDoneButtonOnKeyboard() //Method to add "Pronto" Button to Numeric Pad.
     }
     
     //#############################################################################
@@ -82,35 +82,4 @@ class LoginScreen: UIViewController{
     //#############################################################################
     //----------------- Other Functions -----------------\\
     //#############################################################################
-    
-    //Function to add Done button to Numeric Keyboard.
-    //By default, the iPhone keyboard does'nt have an "Done" button, so the keyboard appear and never desappear.
-    //This function solves that problem by creating an toolbar and adding the done button.
-    func addDoneButtonOnKeyboard() {
-        //Create Toolbar and set style to default.
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        doneToolbar.barStyle = UIBarStyle.default
-        //Create an Bar Button item called "done" which will be the main button.
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        //At Selection Done button, the "doneButtonAction" will be called
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Pronto", style: UIBarButtonItemStyle.done, target: self, action: #selector(LoginScreen.doneButtonAction))
-        
-        //Create an array of BarButtonItens and append space and buttons.
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(done)
-        
-        //Add to toolbar the previous itens and set size to fit screen.
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        //Include the Toolbar in textField1 outlet.
-        self.textField1.inputAccessoryView = doneToolbar
-    }
-    
-    //Function to handle "Done" button click.
-    //It will be called when you press "Pronto" button in keyboard application.
-    func doneButtonAction() {
-        self.textField1.resignFirstResponder()
-    }
 }
