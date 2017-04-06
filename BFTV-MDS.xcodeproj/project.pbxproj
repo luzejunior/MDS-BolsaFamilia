@@ -14,6 +14,7 @@
 		D43583401E941D3A00C8E89A /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D435833F1E941D3A00C8E89A /* CellView.xib */; };
 		D43583421E941D4600C8E89A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583411E941D4600C8E89A /* CellView.swift */; };
 		D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583431E941D5300C8E89A /* CalendarViewController.swift */; };
+		D43583461E95D47200C8E89A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583451E95D47200C8E89A /* DateExtension.swift */; };
 		D469621F1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */; };
 		D46962221E8E82C200262878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46962201E8E82C200262878 /* Main.storyboard */; };
 		D46962241E8E858D00262878 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46962231E8E858D00262878 /* AddressCell.swift */; };
@@ -72,6 +73,7 @@
 		D435833F1E941D3A00C8E89A /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		D43583411E941D4600C8E89A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		D43583431E941D5300C8E89A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D43583451E95D47200C8E89A /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoDeAtendimentoViewController.swift; sourceTree = "<group>"; };
 		D46962211E8E82C200262878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BFTV-MDS/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D46962231E8E858D00262878 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				D4989F181E4FB489001260F0 /* TextFieldMaxLengths.swift */,
 				D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */,
 				D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */,
+				D43583451E95D47200C8E89A /* DateExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
 				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
+				D43583461E95D47200C8E89A /* DateExtension.swift in Sources */,
 				D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */,
 				D4989F231E510D43001260F0 /* MessagePost.swift in Sources */,
 				D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */,

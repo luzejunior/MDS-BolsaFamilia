@@ -26,8 +26,8 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
         
-        let startDate = formatter.date(from: "2017 02 01")! // You can use date generated from a formatter
-        let endDate = Date()                                // You can also use dates created from this function
+        let endDate = formatter.date(from: "2018 01 01")! // You can use date generated from a formatter
+        let startDate = Date()                                // You can also use dates created from this function
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
                                                  numberOfRows: 6, // Only 1, 2, 3, & 6 are allowed
@@ -44,12 +44,17 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         // Setup Cell text
         myCustomCell.dayLabel.text = cellState.text
         myCustomCell.dayLabel.sizeToFit()
+        print(cellState.date)
         
         // Setup text color
-        //if cellState.dateBelongsTo == .thisMonth {
-        myCustomCell.dayLabel.textColor = UIColor.black
-        //} else {
-        //    myCustomCell.dayLabel.textColor = UIColor.gray
-        //}
+        if date.isEqual(to: Date()){
+            myCustomCell.dayLabel.textColor = UIColor.red
+            print("Entrei aqui!")
+        }
+        else if cellState.dateBelongsTo == .thisMonth {
+            myCustomCell.dayLabel.textColor = UIColor.black
+        } else {
+            myCustomCell.dayLabel.textColor = UIColor.gray
+        }
     }
 }
