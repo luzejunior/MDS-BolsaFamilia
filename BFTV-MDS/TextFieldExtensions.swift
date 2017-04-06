@@ -70,13 +70,13 @@ extension UITextField {
         doneToolbar.sizeToFit()
         
         //Include the Toolbar in textField1 outlet.
-        self.inputAccessoryView = doneToolbar
+        inputAccessoryView = doneToolbar
     }
     
     //Function to handle "Done" button click.
     //It will be called when you press "Pronto" button in keyboard application
     func doneButtonAction(textField: UITextField) {
-        self.resignFirstResponder()
+        resignFirstResponder()
     }
     
 }

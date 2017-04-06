@@ -416,6 +416,9 @@
                                 <state key="normal" title="Acessar">
                                     <color key="titleColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAcessarClicked:" destination="9rM-bK-SNK" eventType="touchUpInside" id="t69-jz-SJb"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Zi-H8-ljC">
                                 <rect key="frame" x="16" y="232" width="288" height="228"/>

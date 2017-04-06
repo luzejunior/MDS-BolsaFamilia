@@ -15,6 +15,8 @@
 		D43583421E941D4600C8E89A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583411E941D4600C8E89A /* CellView.swift */; };
 		D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583431E941D5300C8E89A /* CalendarViewController.swift */; };
 		D43583461E95D47200C8E89A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583451E95D47200C8E89A /* DateExtension.swift */; };
+		D435834A1E96A9A900C8E89A /* NisPaymentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43583491E96A9A900C8E89A /* NisPaymentDate.swift */; };
+		D435834E1E96B38100C8E89A /* UtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435834D1E96B38100C8E89A /* UtilFunctions.swift */; };
 		D469621F1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */; };
 		D46962221E8E82C200262878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46962201E8E82C200262878 /* Main.storyboard */; };
 		D46962241E8E858D00262878 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46962231E8E858D00262878 /* AddressCell.swift */; };
@@ -74,6 +76,8 @@
 		D43583411E941D4600C8E89A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		D43583431E941D5300C8E89A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D43583451E95D47200C8E89A /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D43583491E96A9A900C8E89A /* NisPaymentDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NisPaymentDate.swift; sourceTree = "<group>"; };
+		D435834D1E96B38100C8E89A /* UtilFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilFunctions.swift; sourceTree = "<group>"; };
 		D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoDeAtendimentoViewController.swift; sourceTree = "<group>"; };
 		D46962211E8E82C200262878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BFTV-MDS/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D46962231E8E858D00262878 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				D4989F1E1E510A19001260F0 /* UtilVariables.swift */,
+				D435834D1E96B38100C8E89A /* UtilFunctions.swift */,
+				D43583491E96A9A900C8E89A /* NisPaymentDate.swift */,
 				D4989F2A1E51EF38001260F0 /* News.swift */,
 				D4989F2C1E533A8C001260F0 /* Messages.swift */,
 			);
@@ -558,6 +564,7 @@
 				D4989F191E4FB489001260F0 /* TextFieldExtensions.swift in Sources */,
 				D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */,
 				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
+				D435834E1E96B38100C8E89A /* UtilFunctions.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
 				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
 				D43583461E95D47200C8E89A /* DateExtension.swift in Sources */,
@@ -567,6 +574,7 @@
 				D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */,
 				D4989F2B1E51EF38001260F0 /* News.swift in Sources */,
 				D4246AFE1E71D23900DEBEBE /* IphoneModelExtension.swift in Sources */,
+				D435834A1E96A9A900C8E89A /* NisPaymentDate.swift in Sources */,
 				D4989F1D1E50DBC2001260F0 /* MessageList.swift in Sources */,
 				D43583421E941D4600C8E89A /* CellView.swift in Sources */,
 			);
