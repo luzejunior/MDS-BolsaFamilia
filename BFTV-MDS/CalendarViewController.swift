@@ -14,6 +14,20 @@ import JTAppleCalendar
 //Class to CallendarViewController
 class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource{
     
+    //Constraints:
+    @IBOutlet weak var orangeRetangleHeight: NSLayoutConstraint!
+        //Constraints dos dias:
+    @IBOutlet weak var Left_Dom: NSLayoutConstraint!
+    @IBOutlet weak var left_Seg: NSLayoutConstraint!
+    @IBOutlet weak var left_Ter: NSLayoutConstraint!
+    @IBOutlet weak var left_Qua: NSLayoutConstraint!
+    @IBOutlet weak var left_Qui: NSLayoutConstraint!
+    @IBOutlet weak var left_Sex: NSLayoutConstraint!
+    @IBOutlet weak var left_Sab: NSLayoutConstraint!
+    
+    
+    let iphoneModel = UIDevice.current.modelName //Get iPhone Model.
+    
     //Outlets
     @IBOutlet weak var calendarView: JTAppleCalendarView! //Outlet for Calendar View
     @IBOutlet weak var nisTextField: UITextField! //Outlet for Nis TextField
@@ -33,6 +47,27 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         calendarView.dataSource = self //Data Source to calendar View
         calendarView.delegate = self //Calendar view delegate
         calendarView.registerCellViewXib(file: "CellView") //Cell view Registration
+        self.resizeOutletsandConstraints()
+    }
+    
+    func resizeOutletsandConstraints(){
+        print(iphoneModel) //Debug the iPhone Model
+        
+        //For iPhones with 3.5 inch screens:
+        if iphoneModel == "iPhone 4s" || iphoneModel == "iPhone 4"{
+            self.Left_Dom.constant = 5
+            self.left_Seg.constant = 13
+            self.left_Ter.constant = 19
+            self.left_Qua.constant = 16
+            self.left_Qui.constant = 19
+            self.left_Sex.constant = 15
+            self.left_Sab.constant = 14
+            }
+            
+            //For iPhones with 4.7 inch screens:
+        else if iphoneModel == "iPhone 7" || iphoneModel == "iPhone 6s" || iphoneModel == "iPhone 6"{
+            self.orangeRetangleHeight.constant = 250
+       }
     }
     
     //#############################################################################

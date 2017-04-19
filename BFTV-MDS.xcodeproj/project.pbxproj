@@ -20,6 +20,7 @@
 		D469621F1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */; };
 		D46962221E8E82C200262878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46962201E8E82C200262878 /* Main.storyboard */; };
 		D46962241E8E858D00262878 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46962231E8E858D00262878 /* AddressCell.swift */; };
+		D47044F21EA6E36B006B8995 /* UserByNisClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F11EA6E36B006B8995 /* UserByNisClass.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoDeAtendimentoViewController.swift; sourceTree = "<group>"; };
 		D46962211E8E82C200262878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BFTV-MDS/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D46962231E8E858D00262878 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		D47044F11EA6E36B006B8995 /* UserByNisClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserByNisClass.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,14 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
+		D47044F01EA6E351006B8995 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D47044F11EA6E36B006B8995 /* UserByNisClass.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		D4989EDA1E4DF956001260F0 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 		D4989EE51E4DF956001260F0 /* BFTV-MDS */ = {
 			isa = PBXGroup;
 			children = (
+				D47044F01EA6E351006B8995 /* API */,
 				D435833E1E941CDF00C8E89A /* Calendar */,
 				D4246AFC1E70F5BF00DEBEBE /* Utils */,
 				D4989F171E4FB462001260F0 /* Extensions */,
@@ -571,6 +582,7 @@
 				D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */,
 				D4989F231E510D43001260F0 /* MessagePost.swift in Sources */,
 				D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */,
+				D47044F21EA6E36B006B8995 /* UserByNisClass.swift in Sources */,
 				D4246AFB1E70F36200DEBEBE /* FadeExtension.swift in Sources */,
 				D4989F2B1E51EF38001260F0 /* News.swift in Sources */,
 				D4246AFE1E71D23900DEBEBE /* IphoneModelExtension.swift in Sources */,

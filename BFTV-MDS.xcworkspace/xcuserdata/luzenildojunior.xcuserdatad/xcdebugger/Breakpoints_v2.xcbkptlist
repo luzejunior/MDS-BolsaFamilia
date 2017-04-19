@@ -38,49 +38,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFTV-MDS/PontoDeAtendimentoViewController.swift"
-            timestampString = "512965020.516438"
+            timestampString = "514259132.363653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "onPesquisarClicked(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BFTV_MDS.PontoDeAtendimentoViewController.onPesquisarClicked (Any) -&gt; ()"
-                  moduleName = "BFTV-MDS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luzenildojunior/Documents/BFTV-MDS/BFTV-MDS/PontoDeAtendimentoViewController.swift"
-                  timestampString = "512962676.929064"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1233">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BFTV_MDS.PontoDeAtendimentoViewController.(onPesquisarClicked (Any) -&gt; ()).(closure #1)"
-                  moduleName = "BFTV-MDS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luzenildojunior/Documents/BFTV-MDS/BFTV-MDS/PontoDeAtendimentoViewController.swift"
-                  timestampString = "512962676.93113"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
