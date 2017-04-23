@@ -21,6 +21,7 @@
 		D46962221E8E82C200262878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46962201E8E82C200262878 /* Main.storyboard */; };
 		D46962241E8E858D00262878 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46962231E8E858D00262878 /* AddressCell.swift */; };
 		D47044F21EA6E36B006B8995 /* UserByNisClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F11EA6E36B006B8995 /* UserByNisClass.swift */; };
+		D47044F41EA84415006B8995 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F31EA84415006B8995 /* Reachability.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		D46962211E8E82C200262878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BFTV-MDS/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D46962231E8E858D00262878 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		D47044F11EA6E36B006B8995 /* UserByNisClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserByNisClass.swift; sourceTree = "<group>"; };
+		D47044F31EA84415006B8995 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				D43583491E96A9A900C8E89A /* NisPaymentDate.swift */,
 				D4989F2A1E51EF38001260F0 /* News.swift */,
 				D4989F2C1E533A8C001260F0 /* Messages.swift */,
+				D47044F31EA84415006B8995 /* Reachability.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				D469621F1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift in Sources */,
 				D4989F1B1E50DAC7001260F0 /* MainMenu.swift in Sources */,
 				D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */,
+				D47044F41EA84415006B8995 /* Reachability.swift in Sources */,
 				D4989F2D1E533A8C001260F0 /* Messages.swift in Sources */,
 				D46962241E8E858D00262878 /* AddressCell.swift in Sources */,
 				D4D81A691E6603E100399818 /* MapsScreen.swift in Sources */,
