@@ -19,7 +19,8 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     
     //Outlets
     @IBOutlet weak var messageButton: UIButton! //Outlet for "Message" Button.
-    @IBOutlet weak var userName: UILabel! //Oulet for display User Name.
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     //Card Logged Off Outlets
     @IBOutlet weak var cardBackground_LoggedOff: UIImageView! //Card Background Image.
@@ -33,7 +34,11 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     @IBOutlet weak var parcelasButton: UIButton! //Number of parcelas button.
     @IBOutlet weak var nextPaymentLabel: UILabel! //NextPayment Label.
     @IBOutlet weak var dateLabel: UILabel! //Date Label.
+    
     //Constraints
+    @IBOutlet weak var cardBackgroundHeight: NSLayoutConstraint!
+    @IBOutlet weak var cardImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var cardImageTopView: NSLayoutConstraint!
     
     
     //Menu Outlets
@@ -111,6 +116,8 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         self.parcelasButton.isHidden = false
         self.nextPaymentLabel.isHidden = false
         self.dateLabel.isHidden = false
+        self.userName.isHidden = false
+        self.welcomeLabel.isHidden = false
         //Change Card to orange background:
         self.cardBackground_LoggedOff.image = UIImage(named: "orangeRetangule")
         //Fade In:
@@ -121,6 +128,8 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
             self.messageButton.fadeIn(0.5)
             self.messageDivider.fadeIn(0.5)
             self.parcelasButton.fadeIn(0.5)
+            self.userName.fadeIn(0.5)
+            self.welcomeLabel.fadeIn(0.5)
         })
     }
     
@@ -135,6 +144,11 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         
         //For iPhones with 3.5 inch screens:
         if iphoneModel == "iPhone 4s" || iphoneModel == "iPhone 4"{
+            self.cardBackgroundHeight.constant = 170
+            self.cardImageHeight.constant = 90
+            self.cardImageTopView.constant = 15
+            self.labelOptions.font = self.labelOptions.font.withSize(11)
+            self.labelInsertNIS.font = self.labelInsertNIS.font.withSize(13)
         }
             
             //For iPhones with 4.7 inch screens:
