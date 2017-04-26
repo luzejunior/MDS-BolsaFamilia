@@ -22,6 +22,7 @@
 		D46962241E8E858D00262878 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46962231E8E858D00262878 /* AddressCell.swift */; };
 		D47044F21EA6E36B006B8995 /* UserByNisClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F11EA6E36B006B8995 /* UserByNisClass.swift */; };
 		D47044F41EA84415006B8995 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F31EA84415006B8995 /* Reachability.swift */; };
+		D47044F61EB10F7E006B8995 /* OtherProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		D46962231E8E858D00262878 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		D47044F11EA6E36B006B8995 /* UserByNisClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserByNisClass.swift; sourceTree = "<group>"; };
 		D47044F31EA84415006B8995 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProgramsViewController.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */,
 				D46962231E8E858D00262878 /* AddressCell.swift */,
 				D43583431E941D5300C8E89A /* CalendarViewController.swift */,
+				D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				D435834E1E96B38100C8E89A /* UtilFunctions.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
 				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
+				D47044F61EB10F7E006B8995 /* OtherProgramsViewController.swift in Sources */,
 				D43583461E95D47200C8E89A /* DateExtension.swift in Sources */,
 				D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */,
 				D4989F231E510D43001260F0 /* MessagePost.swift in Sources */,

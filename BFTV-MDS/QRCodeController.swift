@@ -21,6 +21,12 @@ class QRCodeController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     //Outlets
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var QRCodeView: UIView!
+    @IBOutlet weak var QRCodeImage: UIImageView!
+    
+    //constraints
+    @IBOutlet weak var QRCodeImageHeight: NSLayoutConstraint!
+    
     
     //#############################################################################
     //----------------- Screen State Functions -----------------\\
@@ -30,10 +36,16 @@ class QRCodeController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.resizeScreen()
+        self.title = "Canal de Interatividade"
         self.messageLabel.text = "No QR code is detected" //Set messageLabel to "No QR code is detected"
         
         let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) //Create a device.
         self.initializeQRCode(capture_device: device!) //Call function to initialize QRCode Capture.
+    }
+    
+    func resizeScreen(){
+        self.QRCodeImageHeight.constant = self.QRCodeImage.bounds.width
     }
     
     //#############################################################################
@@ -58,13 +70,13 @@ class QRCodeController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
-            self.view.layer.addSublayer(videoPreviewLayer!)
+            videoPreviewLayer?.frame = QRCodeView.layer.bounds
+            self.QRCodeView.layer.addSublayer(videoPreviewLayer!)
             
             // Start video capture.
             captureSession?.startRunning()
             //Bring the label to front of the screen.
-            self.view.bringSubview(toFront: messageLabel)
+            self.QRCodeView.bringSubview(toFront: messageLabel)
             
             //Initialize QR Code Frame to highlight the QR code
             self.QRCodeFrameBox()
@@ -85,8 +97,8 @@ class QRCodeController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if let qrCodeFrameView = qrCodeFrameView {
             qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
             qrCodeFrameView.layer.borderWidth = 2
-            self.view.addSubview(qrCodeFrameView)
-            self.view.bringSubview(toFront: qrCodeFrameView)
+            self.QRCodeView.addSubview(qrCodeFrameView)
+            self.QRCodeView.bringSubview(toFront: qrCodeFrameView)
         }
     }
     

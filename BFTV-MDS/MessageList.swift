@@ -46,9 +46,9 @@ class MessageList: UITableViewController {
     //In this particular case, it uses the UtilVariable Class which handles all titles and dates from all news.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageCell //Find NewsCell from Table View in Main Storyboard as NewsCell class.
-        cell.dateLabel.text = UtilVariables.mensagens[indexPath.row].getWarningData() //Set the date from index to the date index in UtilVariables.data class.
-        cell.titleLabel.text = UtilVariables.mensagens[indexPath.row].getWarningType() + " - " + UtilVariables.mensagens[indexPath.row].getWarningTitle()//Set the title from index to the title index in UtilVariables.news class.
-        cell.titleLabel.sizeToFit()
+        //cell.dateLabel.text = UtilVariables.mensagens[indexPath.row].getWarningData() //Set the date from index to the date index in UtilVariables.data class.
+        //cell.titleLabel.text = UtilVariables.mensagens[indexPath.row].getWarningType() + " - " + UtilVariables.mensagens[indexPath.row].getWarningTitle()//Set the title from index to the title index in UtilVariables.news class.
+        //cell.titleLabel.sizeToFit()
         return cell //Return the NewsCell which will be displayed.
     }
     
