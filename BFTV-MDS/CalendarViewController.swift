@@ -31,8 +31,17 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
     //Outlets
     @IBOutlet weak var calendarView: JTAppleCalendarView! //Outlet for Calendar View
     @IBOutlet weak var nisTextField: UITextField! //Outlet for Nis TextField
+    @IBOutlet weak var mesLabel: UILabel!
+    @IBOutlet weak var nextPaymentDate: UILabel!
+    @IBOutlet weak var nextPaymentLabel: UILabel!
+    @IBOutlet weak var calendario2Image: UIImageView!
+    @IBOutlet weak var calendarioImage: UIImageView!
+    @IBOutlet weak var acessarButton: UIButton!
+    @IBOutlet weak var nisLabel: UILabel!
     
-    var monthDateArray: [Date]! //Array of dates
+    var monthDateArray: [Date] = NisPaymentDate.determinePaymentDates(nisLastNumber: "2") //Array of dates
+    var testCalendar = Calendar(identifier: .gregorian)
+    
     var monthFlag: Bool = false //Flag to know if user inputed the Last Nis Number
     
     //#############################################################################
@@ -42,6 +51,8 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
     //Function to be called when screens load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Calendário de Pagamentos"
         
         self.nisTextField.addDoneButtonOnKeyboard() //Adding Done button to keyboard
         calendarView.dataSource = self //Data Source to calendar View
@@ -66,7 +77,7 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
             
             //For iPhones with 4.7 inch screens:
         else if iphoneModel == "iPhone 7" || iphoneModel == "iPhone 6s" || iphoneModel == "iPhone 6"{
-            self.orangeRetangleHeight.constant = 250
+            self.orangeRetangleHeight.constant = 170
        }
     }
     
@@ -100,23 +111,40 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         myCustomCell.dayLabel.sizeToFit()
         //print(cellState.date)
         
-        print(self.monthFlag)
+        //print(self.monthFlag)
         
         // Setup text color
         if date.isEqual(to: Date()){
-            myCustomCell.dayLabel.textColor = UIColor.red
-            print("Entrei aqui!")
+            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+            myCustomCell.layer.backgroundColor = UIColor.red.cgColor
+            myCustomCell.dayLabel.textColor = UIColor.white
+            //print("Entrei aqui!")
         }
         else if cellState.dateBelongsTo == .thisMonth { //If color belogs to this month
+            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+            myCustomCell.layer.backgroundColor = UIColor.white.cgColor
             myCustomCell.dayLabel.textColor = UIColor.black //Set color to Black
-            if self.monthFlag{ //If flag is true
+            //if self.monthFlag{ //If flag is true
                 if cellState.date.isElement(of: self.monthDateArray) { //If cell date is in month date array
-                    myCustomCell.dayLabel.textColor = UIColor.green //Set color to green
+                    myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+                    myCustomCell.layer.backgroundColor = UIColor.green.cgColor
+                    myCustomCell.dayLabel.textColor = UIColor.white //Set color to green
                 }
-            }
+            //}
         } else { //If belongs to other month
+            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+            myCustomCell.layer.backgroundColor = UIColor.white.cgColor
             myCustomCell.dayLabel.textColor = UIColor.gray //Set color to gray
         }
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        guard let startDate = visibleDates.monthDates.first else {
+            return
+        }
+        let month = testCalendar.dateComponents([.month], from: startDate).month!
+        let monthName = DateFormatter().monthSymbols[(month-1) % 12]
+        self.mesLabel.text = monthName
     }
     
     //#############################################################################

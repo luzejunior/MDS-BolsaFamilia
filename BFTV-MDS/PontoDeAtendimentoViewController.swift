@@ -13,9 +13,9 @@ import os.log
 import GoogleMaps
 import GooglePlaces
 
-class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate{
+class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UISearchBarDelegate, UITableViewDataSource{
     
-    var _cep: String!
+    var _cep: String = ""
     var _latitude: NSNumber!
     var _longitude: NSNumber!
     var _Entrys: [UserByNisClass] = []
@@ -29,15 +29,37 @@ class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CL
     //Variables
     var places: GMSPlacesClient?
     
-    @IBOutlet weak var CPFTextField: UITextField!
-    
+    //Outlets
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var mapImage1: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //GoogleMaps Configurations
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         places = GMSPlacesClient() //Instantiate places to load pins on map.
-        self.CPFTextField.addDoneButtonOnKeyboard()
+        //self.CPFTextField.addDoneButtonOnKeyboard()
+        
+        //Change Title
+        self.title = "Postos de Atendimento"
+        
+        //Search Bar Configurations:
+        self.searchBar.delegate = self
+        self.searchBar.keyboardType = .numberPad
+        self.searchBar.textField?.addDoneButtonOnKeyboard()
+        self.searchBar.textField?.maxLength = 8
+        //self.searchBar.textField?.delegate = self
+        
+        //Delegate TableView
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        //Load Entrys
         let filePath = self.documentsPath.appendingPathComponent("UserByNis").path
         if FileManager.default.fileExists(atPath: filePath){
             self._Entrys = self.loadUser()!
@@ -49,10 +71,18 @@ class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CL
                 self._longitude = NSNumber(value:longFloat)
             }
         }
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        _cep = self.searchBar.text!
+        print("Requested CEP: \(_cep)")
+        self.searchBar.resignFirstResponder()
+        //let url = "http://maps.google.com/maps/api/geocode/json?address=\(_cep!)&sensor=true"
+        //let url = "localhost:8080/users"
         if(_Entrys.isEmpty){
             let parameters: Parameters = [
                 "nis" : "\(UtilVariables.nisNumber)",
-                "cep" : "\(_cep!)"
+                "cep" : "\(_cep)"
             ]
             let url = "http://187.64.87.114:3000/users/55555555555"
             //Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
@@ -72,14 +102,6 @@ class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CL
         }
     }
     
-    @IBAction func onPesquisarClicked(_ sender: Any) {
-        _cep = CPFTextField.text!
-        print("Requested CEP: \(_cep!)")
-        //let url = "http://maps.google.com/maps/api/geocode/json?address=\(_cep!)&sensor=true"
-        //let url = "localhost:8080/users"
-        self.checkInternetAndShowImageOrMap()
-    }
-    
     func checkInternetAndShowImageOrMap(){
         if Reachability.isConnectedToNetwork(){
             self.showMap()
@@ -88,19 +110,29 @@ class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CL
         }
     }
     
+    func dismissScreenElements(){
+        self.mapImage1.isHidden = true
+        self.label1.isHidden = true
+        self.label2.isHidden = true
+    }
+    
     func showMap(){
+        self.dismissScreenElements()
         if self.mapsView.isHidden{
             self.mapsView.isHidden = false
             self.MapImage.isHidden = true
             self.createGPSScreen(latitude: self._latitude as! CLLocationDegrees, longitude: self._longitude as! CLLocationDegrees, zoom: 16)
             self.setUpMarkers()
+            self.configureTableView()
         }
     }
     
     func showImage(){
+        self.dismissScreenElements()
         if self.MapImage.isHidden{
             self.mapsView.isHidden = true
             self.MapImage.isHidden = false
+            self.configureTableView()
             let filePath = self.documentsPath.appendingPathComponent("image.png").path
             if FileManager.default.fileExists(atPath: filePath) {
                 self.MapImage.image = UIImage(contentsOfFile: filePath)
@@ -134,6 +166,40 @@ class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CL
             }
 
         }
+    }
+    
+    //#############################################################################
+    //----------------- Table Views Functions -----------------\\
+    //#############################################################################\
+    
+    func configureTableView(){
+        if self.tableView.isHidden {
+            self.tableView.isHidden = false
+        }
+        self.tableView.reloadData()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1 //Set the number of sections to 1
+    }
+    
+    //This Method sets the number of elements in Table View List
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(self._POI == nil){
+            return 0
+        }else{
+            return self._POI.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as! POIListCell
+        if(_POI != nil){
+            let pointofinterest = self._POI[indexPath.row]
+            cell.poiNameLabel.text = pointofinterest["name"] as? String
+            cell.poiStreetLabel.text = pointofinterest["address"] as? String
+        }
+        return cell
     }
     
     //#############################################################################
@@ -173,12 +239,12 @@ class PontoDeAtendimentoViewController: UIViewController, GMSMapViewDelegate, CL
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Location Changed")
+        //print("Location Changed")
         if let locations = locations.first{
             //let new_coordinate = CLLocationCoordinate2DMake(locations.coordinate.latitude,locations.coordinate.longitude)
             //self.mapsView.animate(with: GMSCameraUpdate.setTarget(new_coordinate))
             //self.mapsView.animate(to: GMSCameraPosition(target: locations.coordinate, zoom: 15, bearing: 0, viewingAngle: 0))
-            print("Camera Position Changed")
+            //print("Camera Position Changed")
             //locationManager.stopUpdatingLocation()
         }
     }

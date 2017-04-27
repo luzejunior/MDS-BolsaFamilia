@@ -23,6 +23,10 @@
 		D47044F21EA6E36B006B8995 /* UserByNisClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F11EA6E36B006B8995 /* UserByNisClass.swift */; };
 		D47044F41EA84415006B8995 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F31EA84415006B8995 /* Reachability.swift */; };
 		D47044F61EB10F7E006B8995 /* OtherProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */; };
+		D47044F81EB16AAB006B8995 /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044F71EB16AAB006B8995 /* SearchBarExtension.swift */; };
+		D47044FB1EB18A27006B8995 /* POIListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044FA1EB18A27006B8995 /* POIListCell.swift */; };
+		D47044FD1EB25F34006B8995 /* OtherProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */; };
+		D47044FF1EB26813006B8995 /* AboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044FE1EB26813006B8995 /* AboutScreenViewController.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -87,6 +91,10 @@
 		D47044F11EA6E36B006B8995 /* UserByNisClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserByNisClass.swift; sourceTree = "<group>"; };
 		D47044F31EA84415006B8995 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProgramsViewController.swift; sourceTree = "<group>"; };
+		D47044F71EB16AAB006B8995 /* SearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
+		D47044FA1EB18A27006B8995 /* POIListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIListCell.swift; sourceTree = "<group>"; };
+		D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProgramsCell.swift; sourceTree = "<group>"; };
+		D47044FE1EB26813006B8995 /* AboutScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreenViewController.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +193,18 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		D47044F91EB189F6006B8995 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				D4989F261E510D67001260F0 /* MessageCell.swift */,
+				D4989F281E510D7D001260F0 /* NewsCell.swift */,
+				D47044FA1EB18A27006B8995 /* POIListCell.swift */,
+				D46962231E8E858D00262878 /* AddressCell.swift */,
+				D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
 		D4989EDA1E4DF956001260F0 = {
 			isa = PBXGroup;
 			children = (
@@ -247,20 +267,19 @@
 		D4989F141E4FADC7001260F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D47044F91EB189F6006B8995 /* TableCells */,
 				D4989F151E4FADE8001260F0 /* LoginScreen.swift */,
 				D4989F1A1E50DAC7001260F0 /* MainMenu.swift */,
 				D4989F1C1E50DBC2001260F0 /* MessageList.swift */,
-				D4989F261E510D67001260F0 /* MessageCell.swift */,
 				D4989F221E510D43001260F0 /* MessagePost.swift */,
 				D4989F201E510D38001260F0 /* NewsList.swift */,
-				D4989F281E510D7D001260F0 /* NewsCell.swift */,
 				D4989F241E510D55001260F0 /* NewsPost.swift */,
 				D4D81A681E6603E100399818 /* MapsScreen.swift */,
 				D424F5251E66193600D1E82A /* QRCodeController.swift */,
 				D469621E1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift */,
-				D46962231E8E858D00262878 /* AddressCell.swift */,
 				D43583431E941D5300C8E89A /* CalendarViewController.swift */,
 				D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */,
+				D47044FE1EB26813006B8995 /* AboutScreenViewController.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -272,6 +291,7 @@
 				D4246AFA1E70F36200DEBEBE /* FadeExtension.swift */,
 				D4246AFD1E71D23900DEBEBE /* IphoneModelExtension.swift */,
 				D43583451E95D47200C8E89A /* DateExtension.swift */,
+				D47044F71EB16AAB006B8995 /* SearchBarExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -576,18 +596,22 @@
 				D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */,
 				D47044F41EA84415006B8995 /* Reachability.swift in Sources */,
 				D4989F2D1E533A8C001260F0 /* Messages.swift in Sources */,
+				D47044F81EB16AAB006B8995 /* SearchBarExtension.swift in Sources */,
 				D46962241E8E858D00262878 /* AddressCell.swift in Sources */,
 				D4D81A691E6603E100399818 /* MapsScreen.swift in Sources */,
 				D4989F211E510D38001260F0 /* NewsList.swift in Sources */,
 				D4989F191E4FB489001260F0 /* TextFieldExtensions.swift in Sources */,
 				D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */,
 				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
+				D47044FB1EB18A27006B8995 /* POIListCell.swift in Sources */,
 				D435834E1E96B38100C8E89A /* UtilFunctions.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
 				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
 				D47044F61EB10F7E006B8995 /* OtherProgramsViewController.swift in Sources */,
 				D43583461E95D47200C8E89A /* DateExtension.swift in Sources */,
+				D47044FF1EB26813006B8995 /* AboutScreenViewController.swift in Sources */,
 				D43583441E941D5300C8E89A /* CalendarViewController.swift in Sources */,
+				D47044FD1EB25F34006B8995 /* OtherProgramsCell.swift in Sources */,
 				D4989F231E510D43001260F0 /* MessagePost.swift in Sources */,
 				D4989F291E510D7D001260F0 /* NewsCell.swift in Sources */,
 				D47044F21EA6E36B006B8995 /* UserByNisClass.swift in Sources */,

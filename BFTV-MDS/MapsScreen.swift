@@ -16,6 +16,7 @@ import GooglePlaces
 class MapsScreen: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var mapsView: GMSMapView!
+    
     let locationManager = CLLocationManager()
     
     //Variables
