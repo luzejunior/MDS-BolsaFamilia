@@ -16,6 +16,7 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     //Control Variables
     let iphoneModel = UIDevice.current.modelName //Get iPhone Model.
     let _storyboard = UIStoryboard(name: "Main", bundle: nil) //Get Main Storyboard.
+    var aPopupContainer: PopupContainer?
     
     //Outlets
     @IBOutlet weak var messageButton: UIButton! //Outlet for "Message" Button.
@@ -177,7 +178,7 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
     //This function presents the popover presentation style, showing the login screen view in a popup allowing users to log in.
     func onCardImageClicked(){
         //Instantiate Storyboard:
-        let popover = _storyboard.instantiateViewController(withIdentifier: "Login Screen") as! LoginScreen
+        /*let popover = _storyboard.instantiateViewController(withIdentifier: "Login Screen") as! LoginScreen
         popover.modalPresentationStyle = UIModalPresentationStyle.popover //Set style to Popover.
         popover.preferredContentSize = CGSize(width: 300, height: 350) //Set Size of popover.
         let popoverViewController = popover.popoverPresentationController //Create a presentation controller.
@@ -185,7 +186,11 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         popoverViewController!.delegate = self //Delegate itself actions.
         popoverViewController!.sourceView = self.view //Delegate the source view to thid view controller.
         popover.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 100, width: 1, height: 1) //Set the source of popover screen position.
-        present(popover, animated: true, completion: nil) //Show Popover.
+        present(popover, animated: true, completion: nil) //Show Popover.*/
+        
+        let xibView = Bundle.main.loadNibNamed("loginScreen", owner: nil, options: nil)?[0] as! loginScreenController
+        xibView.lsDelegate = self
+        PopupContainer.generatePopupWithView(xibView).show()
     }
     
     //#############################################################################
@@ -243,5 +248,28 @@ class MainMenu: UIViewController, UIPopoverPresentationControllerDelegate{
         let loginScreen = _storyboard.instantiateViewController(withIdentifier: "Login Screen") as! LoginScreen
         loginScreen.textField1.resignFirstResponder()
     }
-
 }
+
+extension MainMenu: LoginScreenDelegate {
+    func checkNis(){
+        if UtilVariables.nisNumber == "10120380142"{ //If NIS Number was found
+            //let nextView = storyBoard.instantiateViewController(withIdentifier: "Screen1Nav") as! UINavigationController
+            UtilVariables.isNisValid = true //Set variable that handles Nis authenticity to True.
+            dismissUserLoggedOffMenu()
+            presentLoginOnScreen()
+        }else if UtilVariables.nisNumber == ""{ //If NIS is empty, throw an error message.
+            let messageAlert = UIAlertController(title: "Erro", message: "Você não digitou um número NIS.", preferredStyle: UIAlertControllerStyle.alert)
+            messageAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(messageAlert, animated: true, completion: nil)
+        }else if UtilVariables.nisNumber.characters.count < 11 { //If NIS is less than 11 numbers, throw an error message.
+            let messageAlert = UIAlertController(title: "Erro", message: "O número NIS é inválido.", preferredStyle: UIAlertControllerStyle.alert)
+            messageAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(messageAlert, animated: true, completion: nil)
+        }else{ //If NIS is invalid, throw an error message.
+            let messageAlert = UIAlertController(title: "Erro", message: "Seu numero NIS não foi encontrado.", preferredStyle: UIAlertControllerStyle.alert)
+            messageAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(messageAlert, animated: true, completion: nil)
+        }
+    }
+}
+

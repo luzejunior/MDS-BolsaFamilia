@@ -1184,7 +1184,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Screen1Nav" automaticallyAdjustsScrollViewInsets="NO" id="uQv-fa-JrP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSr-47-UdP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jSr-47-UdP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.63052201269999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
