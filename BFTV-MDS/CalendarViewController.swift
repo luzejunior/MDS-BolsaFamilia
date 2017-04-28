@@ -40,6 +40,12 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
     @IBOutlet weak var nisLabel: UILabel!
     
     var monthDateArray: [Date] = NisPaymentDate.determinePaymentDates(nisLastNumber: "2") //Array of dates
+    
+    var setDay: String {
+        let date = "\(monthDateArray[0])"
+        return date
+    }
+    
     var testCalendar = Calendar(identifier: .gregorian)
     
     var monthFlag: Bool = false //Flag to know if user inputed the Last Nis Number

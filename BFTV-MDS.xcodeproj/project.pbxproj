@@ -27,6 +27,8 @@
 		D47044FB1EB18A27006B8995 /* POIListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044FA1EB18A27006B8995 /* POIListCell.swift */; };
 		D47044FD1EB25F34006B8995 /* OtherProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */; };
 		D47044FF1EB26813006B8995 /* AboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47044FE1EB26813006B8995 /* AboutScreenViewController.swift */; };
+		D47045011EB26A9E006B8995 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47045001EB26A9E006B8995 /* AboutCell.swift */; };
+		D47045031EB36F44006B8995 /* PopupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47045021EB36F44006B8995 /* PopupContainer.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		D47044FA1EB18A27006B8995 /* POIListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIListCell.swift; sourceTree = "<group>"; };
 		D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProgramsCell.swift; sourceTree = "<group>"; };
 		D47044FE1EB26813006B8995 /* AboutScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreenViewController.swift; sourceTree = "<group>"; };
+		D47045001EB26A9E006B8995 /* AboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		D47045021EB36F44006B8995 /* PopupContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupContainer.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				D4989F2A1E51EF38001260F0 /* News.swift */,
 				D4989F2C1E533A8C001260F0 /* Messages.swift */,
 				D47044F31EA84415006B8995 /* Reachability.swift */,
+				D47045021EB36F44006B8995 /* PopupContainer.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				D47044FA1EB18A27006B8995 /* POIListCell.swift */,
 				D46962231E8E858D00262878 /* AddressCell.swift */,
 				D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */,
+				D47045001EB26A9E006B8995 /* AboutCell.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 				D47044F41EA84415006B8995 /* Reachability.swift in Sources */,
 				D4989F2D1E533A8C001260F0 /* Messages.swift in Sources */,
 				D47044F81EB16AAB006B8995 /* SearchBarExtension.swift in Sources */,
+				D47045031EB36F44006B8995 /* PopupContainer.swift in Sources */,
 				D46962241E8E858D00262878 /* AddressCell.swift in Sources */,
 				D4D81A691E6603E100399818 /* MapsScreen.swift in Sources */,
 				D4989F211E510D38001260F0 /* NewsList.swift in Sources */,
@@ -606,6 +613,7 @@
 				D47044FB1EB18A27006B8995 /* POIListCell.swift in Sources */,
 				D435834E1E96B38100C8E89A /* UtilFunctions.swift in Sources */,
 				D4989F251E510D55001260F0 /* NewsPost.swift in Sources */,
+				D47045011EB26A9E006B8995 /* AboutCell.swift in Sources */,
 				D4989F161E4FADE8001260F0 /* LoginScreen.swift in Sources */,
 				D47044F61EB10F7E006B8995 /* OtherProgramsViewController.swift in Sources */,
 				D43583461E95D47200C8E89A /* DateExtension.swift in Sources */,

@@ -724,10 +724,10 @@
             </objects>
             <point key="canvasLocation" x="2548" y="551.87406296851577"/>
         </scene>
-        <!--View Controller-->
+        <!--About Screen View Controller-->
         <scene sceneID="a6Y-un-gaT">
             <objects>
-                <viewController id="oY8-T4-nLn" sceneMemberID="viewController">
+                <viewController id="oY8-T4-nLn" customClass="AboutScreenViewController" customModule="BFTV_MDS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gnb-MA-AMK"/>
                         <viewControllerLayoutGuide type="bottom" id="7PL-hH-ZXw"/>
@@ -763,21 +763,42 @@
                                             <color key="titleColor" red="1" green="0.63052201269999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bolsa_familia" translatesAutoresizingMaskIntoConstraints="NO" id="PRu-if-ibQ">
+                                        <rect key="frame" x="145" y="19" width="85" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-3h-JPu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-3h-JPu">
                                 <rect key="frame" x="0.0" y="376" width="375" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94110500809999997" green="0.93685287240000004" blue="0.96157747510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4AT-96-PwB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="4AT-96-PwB" customClass="AboutCell" customModule="BFTV_MDS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4AT-96-PwB" id="ppr-mU-gt6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fu8-sX-K8e">
+                                                    <rect key="frame" x="22" y="17" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quem tem direito ao bolsa familia?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqi-0h-53K">
+                                                    <rect key="frame" x="95" y="34" width="236" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImage" destination="fu8-sX-K8e" id="3JC-on-MbC"/>
+                                            <outlet property="cellTitle" destination="Hqi-0h-53K" id="9sC-EW-cbd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -791,6 +812,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94110500812530518" green="0.93685287237167358" blue="0.96157747507095337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Hbt-3h-JPu" id="ci1-BB-PL9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYz-aQ-zXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1160,7 +1184,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Screen1Nav" automaticallyAdjustsScrollViewInsets="NO" id="uQv-fa-JrP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jSr-47-UdP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSr-47-UdP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.63052201269999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1185,6 +1209,7 @@
         <image name="big_border@1x" width="288" height="290"/>
         <image name="big_map" width="155" height="175"/>
         <image name="blackRetangule" width="540" height="324"/>
+        <image name="bolsa_familia" width="93" height="94"/>
         <image name="calendarButton" width="102" height="117"/>
         <image name="calendario" width="54" height="60"/>
         <image name="cardPicture" width="159" height="144"/>

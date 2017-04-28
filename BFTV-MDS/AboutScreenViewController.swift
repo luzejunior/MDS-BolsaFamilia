@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class AboutScreenViewController: UIViewController, UITableViewDataSource, UITabBarDelegate{
+class AboutScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+    @IBOutlet weak var tableView: UITableView!
     
     let titles: [String] = [
         "Quem tem direito ao Bolsa Familia?",
@@ -19,13 +21,30 @@ class AboutScreenViewController: UIViewController, UITableViewDataSource, UITabB
     ]
     
     let images: [String] = [
-        "icon_energia",
-        "icon_feliz"
+        "icon_question",
+        "icon_cadastro",
+        "icon_money",
+        "icon_check"
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AboutCell
+        cell.cellImage.image = UIImage(named: images[indexPath.row])
+        cell.cellTitle.text = titles[indexPath.row]
+        return cell
+    }
 }
