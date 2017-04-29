@@ -14,16 +14,16 @@ import JTAppleCalendar
 //Class to CallendarViewController
 class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource{
     
-    //Constraints:
-    @IBOutlet weak var orangeRetangleHeight: NSLayoutConstraint!
-        //Constraints dos dias:
-    @IBOutlet weak var Left_Dom: NSLayoutConstraint!
-    @IBOutlet weak var left_Seg: NSLayoutConstraint!
-    @IBOutlet weak var left_Ter: NSLayoutConstraint!
-    @IBOutlet weak var left_Qua: NSLayoutConstraint!
-    @IBOutlet weak var left_Qui: NSLayoutConstraint!
-    @IBOutlet weak var left_Sex: NSLayoutConstraint!
-    @IBOutlet weak var left_Sab: NSLayoutConstraint!
+//    //Constraints:
+//    @IBOutlet weak var orangeRetangleHeight: NSLayoutConstraint!
+//        //Constraints dos dias:
+//    @IBOutlet weak var Left_Dom: NSLayoutConstraint!
+//    @IBOutlet weak var left_Seg: NSLayoutConstraint!
+//    @IBOutlet weak var left_Ter: NSLayoutConstraint!
+//    @IBOutlet weak var left_Qua: NSLayoutConstraint!
+//    @IBOutlet weak var left_Qui: NSLayoutConstraint!
+//    @IBOutlet weak var left_Sex: NSLayoutConstraint!
+//    @IBOutlet weak var left_Sab: NSLayoutConstraint!
     
     
     let iphoneModel = UIDevice.current.modelName //Get iPhone Model.
@@ -72,18 +72,18 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         
         //For iPhones with 3.5 inch screens:
         if iphoneModel == "iPhone 4s" || iphoneModel == "iPhone 4"{
-            self.Left_Dom.constant = 5
-            self.left_Seg.constant = 13
-            self.left_Ter.constant = 19
-            self.left_Qua.constant = 16
-            self.left_Qui.constant = 19
-            self.left_Sex.constant = 15
-            self.left_Sab.constant = 14
+//            self.Left_Dom.constant = 5
+//            self.left_Seg.constant = 13
+//            self.left_Ter.constant = 19
+//            self.left_Qua.constant = 16
+//            self.left_Qui.constant = 19
+//            self.left_Sex.constant = 15
+//            self.left_Sab.constant = 14
             }
             
             //For iPhones with 4.7 inch screens:
         else if iphoneModel == "iPhone 7" || iphoneModel == "iPhone 6s" || iphoneModel == "iPhone 6"{
-            self.orangeRetangleHeight.constant = 170
+            //self.orangeRetangleHeight.constant = 170
        }
     }
     
@@ -119,26 +119,19 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         
         //print(self.monthFlag)
         
-        // Setup text color
-        if date.isEqual(to: Date()){
-            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
-            myCustomCell.layer.backgroundColor = UIColor.red.cgColor
-            myCustomCell.dayLabel.textColor = UIColor.white
-            //print("Entrei aqui!")
-        }
-        else if cellState.dateBelongsTo == .thisMonth { //If color belogs to this month
-            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+        if cellState.dateBelongsTo == .thisMonth { //If color belogs to this month
+            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.57
             myCustomCell.layer.backgroundColor = UIColor.white.cgColor
             myCustomCell.dayLabel.textColor = UIColor.black //Set color to Black
             //if self.monthFlag{ //If flag is true
                 if cellState.date.isElement(of: self.monthDateArray) { //If cell date is in month date array
-                    myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+                    myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.57
                     myCustomCell.layer.backgroundColor = UIColor.green.cgColor
                     myCustomCell.dayLabel.textColor = UIColor.white //Set color to green
                 }
             //}
-        } else { //If belongs to other month
-            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.37
+        }else { //If belongs to other month
+            myCustomCell.layer.cornerRadius = myCustomCell.frame.height * 0.57
             myCustomCell.layer.backgroundColor = UIColor.white.cgColor
             myCustomCell.dayLabel.textColor = UIColor.gray //Set color to gray
         }

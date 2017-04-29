@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +22,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bolsafamilia_big" translatesAutoresizingMaskIntoConstraints="NO" id="UXW-nr-vhs">
+                                <rect key="frame" x="82" y="126" width="211" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UXW-nr-vhs" secondAttribute="height" multiplier="1:1" id="L3a-MW-Cak"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mdsa" translatesAutoresizingMaskIntoConstraints="NO" id="vZm-Vi-AAR">
+                                <rect key="frame" x="97" y="457.5" width="182" height="105.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vZm-Vi-AAR" secondAttribute="height" multiplier="169:98" id="fux-jj-PE7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UXW-nr-vhs" firstAttribute="centerX" secondItem="vZm-Vi-AAR" secondAttribute="centerX" id="A8d-cM-VPH"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vZm-Vi-AAR" secondAttribute="bottom" constant="104" id="AFD-xz-HUB"/>
+                            <constraint firstItem="UXW-nr-vhs" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="106" id="BqE-2C-0aO"/>
+                            <constraint firstItem="vZm-Vi-AAR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="81" id="BwV-uN-q7d"/>
+                            <constraint firstItem="UXW-nr-vhs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qpd-6y-5y3"/>
+                            <constraint firstItem="UXW-nr-vhs" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="66" id="eol-aL-fnS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_bolsafamilia_big" width="230" height="229"/>
+        <image name="logo_mdsa" width="174" height="105"/>
+    </resources>
 </document>

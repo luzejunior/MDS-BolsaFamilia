@@ -31,6 +31,9 @@
 		D47045031EB36F44006B8995 /* PopupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47045021EB36F44006B8995 /* PopupContainer.swift */; };
 		D47045051EB37007006B8995 /* loginScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47045041EB37007006B8995 /* loginScreen.xib */; };
 		D47045071EB37A15006B8995 /* loginScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47045061EB37A15006B8995 /* loginScreenController.swift */; };
+		D470450B1EB3F592006B8995 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470450A1EB3F592006B8995 /* PaymentViewController.swift */; };
+		D470450D1EB3F5CC006B8995 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470450C1EB3F5CC006B8995 /* PaymentCell.swift */; };
+		D470450F1EB528CE006B8995 /* SocialNetworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470450E1EB528CE006B8995 /* SocialNetworksViewController.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -103,6 +106,9 @@
 		D47045021EB36F44006B8995 /* PopupContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupContainer.swift; sourceTree = "<group>"; };
 		D47045041EB37007006B8995 /* loginScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginScreen.xib; sourceTree = "<group>"; };
 		D47045061EB37A15006B8995 /* loginScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginScreenController.swift; sourceTree = "<group>"; };
+		D470450A1EB3F592006B8995 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		D470450C1EB3F5CC006B8995 /* PaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
+		D470450E1EB528CE006B8995 /* SocialNetworksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworksViewController.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 				D46962231E8E858D00262878 /* AddressCell.swift */,
 				D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */,
 				D47045001EB26A9E006B8995 /* AboutCell.swift */,
+				D470450C1EB3F5CC006B8995 /* PaymentCell.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -292,6 +299,8 @@
 				D47044F51EB10F7E006B8995 /* OtherProgramsViewController.swift */,
 				D47044FE1EB26813006B8995 /* AboutScreenViewController.swift */,
 				D47045061EB37A15006B8995 /* loginScreenController.swift */,
+				D470450A1EB3F592006B8995 /* PaymentViewController.swift */,
+				D470450E1EB528CE006B8995 /* SocialNetworksViewController.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -608,7 +617,9 @@
 				D4989F1B1E50DAC7001260F0 /* MainMenu.swift in Sources */,
 				D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */,
 				D47044F41EA84415006B8995 /* Reachability.swift in Sources */,
+				D470450F1EB528CE006B8995 /* SocialNetworksViewController.swift in Sources */,
 				D4989F2D1E533A8C001260F0 /* Messages.swift in Sources */,
+				D470450B1EB3F592006B8995 /* PaymentViewController.swift in Sources */,
 				D47044F81EB16AAB006B8995 /* SearchBarExtension.swift in Sources */,
 				D47045031EB36F44006B8995 /* PopupContainer.swift in Sources */,
 				D47045071EB37A15006B8995 /* loginScreenController.swift in Sources */,
@@ -617,6 +628,7 @@
 				D4989F211E510D38001260F0 /* NewsList.swift in Sources */,
 				D4989F191E4FB489001260F0 /* TextFieldExtensions.swift in Sources */,
 				D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */,
+				D470450D1EB3F5CC006B8995 /* PaymentCell.swift in Sources */,
 				D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */,
 				D47044FB1EB18A27006B8995 /* POIListCell.swift in Sources */,
 				D435834E1E96B38100C8E89A /* UtilFunctions.swift in Sources */,
