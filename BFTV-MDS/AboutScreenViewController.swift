@@ -31,6 +31,7 @@ class AboutScreenViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.title = "Sobre"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

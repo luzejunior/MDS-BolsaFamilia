@@ -14,18 +14,15 @@ class OtherProgramsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     let titles: [String] = [
-    "Tarifa Social de Energia Elétrica",
     "Criança Feliz"
     ]
     
     let descption: [String] = [
-    "Programa que oferece desconto na conta de energia elétrica.",
     "Programa que incentiva as familias a cuidarem melhor das suas crianças."
     ]
     
     let images: [String] = [
-    "icon_energia",
-    "icon_feliz"
+    "criancafeliz_big"
     ]
     
     override func viewDidLoad() {

@@ -143,7 +143,7 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDelegate, JTA
         }
         let month = testCalendar.dateComponents([.month], from: startDate).month!
         let monthName = DateFormatter().monthSymbols[(month-1) % 12]
-        self.mesLabel.text = monthName
+        //self.mesLabel.text = monthName
     }
     
     //#############################################################################

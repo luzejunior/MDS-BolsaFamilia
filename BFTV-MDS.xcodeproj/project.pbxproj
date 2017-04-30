@@ -34,6 +34,7 @@
 		D470450B1EB3F592006B8995 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470450A1EB3F592006B8995 /* PaymentViewController.swift */; };
 		D470450D1EB3F5CC006B8995 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470450C1EB3F5CC006B8995 /* PaymentCell.swift */; };
 		D470450F1EB528CE006B8995 /* SocialNetworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470450E1EB528CE006B8995 /* SocialNetworksViewController.swift */; };
+		D47045111EB52C4E006B8995 /* SocialNetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47045101EB52C4E006B8995 /* SocialNetworkCell.swift */; };
 		D4989EE71E4DF956001260F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE61E4DF956001260F0 /* AppDelegate.swift */; };
 		D4989EE91E4DF956001260F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4989EE81E4DF956001260F0 /* ViewController.swift */; };
 		D4989EEE1E4DF956001260F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4989EED1E4DF956001260F0 /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		D470450A1EB3F592006B8995 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		D470450C1EB3F5CC006B8995 /* PaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		D470450E1EB528CE006B8995 /* SocialNetworksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworksViewController.swift; sourceTree = "<group>"; };
+		D47045101EB52C4E006B8995 /* SocialNetworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworkCell.swift; sourceTree = "<group>"; };
 		D4989EE31E4DF956001260F0 /* BFTV-MDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFTV-MDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4989EE61E4DF956001260F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4989EE81E4DF956001260F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				D47044FC1EB25F34006B8995 /* OtherProgramsCell.swift */,
 				D47045001EB26A9E006B8995 /* AboutCell.swift */,
 				D470450C1EB3F5CC006B8995 /* PaymentCell.swift */,
+				D47045101EB52C4E006B8995 /* SocialNetworkCell.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				D4989F1F1E510A19001260F0 /* UtilVariables.swift in Sources */,
 				D469621F1E8E81FB00262878 /* PontoDeAtendimentoViewController.swift in Sources */,
 				D4989F1B1E50DAC7001260F0 /* MainMenu.swift in Sources */,
+				D47045111EB52C4E006B8995 /* SocialNetworkCell.swift in Sources */,
 				D424F5261E66193600D1E82A /* QRCodeController.swift in Sources */,
 				D47044F41EA84415006B8995 /* Reachability.swift in Sources */,
 				D470450F1EB528CE006B8995 /* SocialNetworksViewController.swift in Sources */,
